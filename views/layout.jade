@@ -33,11 +33,11 @@ html
               // <img src="images/bclogo.png" alt="Expose" height="35px" />
         .navbar-collapse.collapse
           ul.nav.navbar-nav
-            li.active
-              a(href='/') Home
-            li
+            li(class=title=='Home'?'active':undefined)
+              a(href="/") Home
+            li(class=title=='Technologies'?'active':undefined)
               a(href='/technologies') Technologies & Frameworks
-            li
+            li(class=title=='Rankings'?'active':undefined)
               a(href='/rankings') Rankings
             li
               a(href='#pricing') Pricing

@@ -1,3 +1,10 @@
+body {
+  padding-top: 30px; !important}
+
+.page-header {
+  color: #157FB5;
+}
+
 .jumbotron{
     background: url(/images/index_bg.jpeg) !important;
     color: #ffffff;
