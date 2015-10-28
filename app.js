@@ -1,17 +1,41 @@
+require( './db' );
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+//var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var technologies = require('./routes/technologies');
 var rankings = require('./routes/rankings');
+var codesites = require('./routes/codesites');
 
 var app = express();
+
+var http = require ('http');         // For serving a basic web page.
+var mongoose = require ("mongoose"); // The reason for this demo.
+
+// Here we find an appropriate database to connect to, defaulting to
+// localhost if we don't find one.
+
+//var uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/bit_coach_db';
+
+// The http server will listen to an appropriate port, or default to
+// port 5000.
+var theport = process.env.PORT || 5000;
+
+// Makes connection asynchronously.  Mongoose will queue up database
+// operations and release them when the connection is complete.
+//mongoose.connect(uristring, function (err, res) {
+//  if (err) {
+//  console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+//  } else {
+//  console.log ('Succeeded connected to: ' + uristring);
+//  }
+//});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,6 +54,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/technologies', technologies);
 app.use('/rankings', rankings);
+app.use('/codesites', codesites);
 
 
 
