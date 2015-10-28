@@ -1,0 +1,27 @@
+{
+  "name": "bit_coach",
+  "description": "Find the best place to learn to code",
+  "main": "app.js",
+  "authors": [
+    "bpolly"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "learn",
+    "coach",
+    "node",
+    "rails",
+    "ruby",
+    "demo",
+    "tutorial"
+  ],
+  "homepage": "https://github.com/bpolly/BitCoach",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
