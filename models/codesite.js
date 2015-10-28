@@ -5,4 +5,4 @@ var codesiteSchema = new mongoose.Schema({
     name: String
   });
 
-mongoose.model('Codesite', CodesiteSchema); // register model
+mongoose.model('Codesite', codesiteSchema); // register model

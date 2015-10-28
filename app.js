@@ -7,12 +7,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 //var mongoose = require('mongoose');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var technologies = require('./routes/technologies');
-var rankings = require('./routes/rankings');
-var codesites = require('./routes/codesites');
-
 var app = express();
 
 var http = require ('http');         // For serving a basic web page.
@@ -50,10 +44,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+var routes = require('./routes/index');
 app.use('/', routes);
+var users = require('./routes/users');
 app.use('/users', users);
+var technologies = require('./routes/technologies');
 app.use('/technologies', technologies);
+var rankings = require('./routes/rankings');
 app.use('/rankings', rankings);
+var codesites = require('./routes/codesites');
 app.use('/codesites', codesites);
 
 
