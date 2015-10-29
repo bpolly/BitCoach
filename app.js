@@ -54,8 +54,6 @@ var technologies = require('./routes/technologies');
 app.use('/technologies', technologies);
 var rankings = require('./routes/rankings');
 app.use('/rankings', rankings);
-var codesites = require('./routes/codesites');
-app.use('/codesites', codesites);
 var sites = require('./routes/site');
 app.use('/sites', sites);
 

@@ -4,6 +4,8 @@ var app = express();
 var bodyParser = require('body-parser');
 var site = require('../models/site');
 var mongoose = require('mongoose');
+var util = require('util');
+var category = "Sites";
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -12,11 +14,13 @@ app.use(bodyParser.json());
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //res.render('index', { title: 'Bit Coach' });
-  res.render('sites/index', { title: 'Sites' });
+  var collection = mongoose.connection.db.collection('Sites');
+
+  res.render('sites/index', { title: 'Sites', category: category, site_list: collection });
 });
 
 router.get('/new', function(req, res, next){
-  res.render('sites/new', { title: 'Sites' });
+  res.render('sites/new', { title: 'New Site', category: category });
 })
 
 

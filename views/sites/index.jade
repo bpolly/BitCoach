@@ -1,6 +1,9 @@
 extends ../layout
 
 block content
-  h1= title
-  a(href="/sites/new") New
+  .container
+    script(type='text/javascript'). 
+      console.log("Hello from the View");
+      console.log(#{site_list});
+    a(href="/sites/new") New
   
