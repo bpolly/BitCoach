@@ -6,6 +6,7 @@ var site = require('../models/site');
 var mongoose = require('mongoose');
 var util = require('util');
 var category = "Sites";
+var json
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -14,9 +15,28 @@ app.use(bodyParser.json());
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //res.render('index', { title: 'Bit Coach' });
-  var collection = mongoose.connection.db.collection('Sites');
+  //var collection = mongoose.connection.db.collection('Sites');
+  // Tank.find({ size: 'small' }).where('createdDate').gt(oneYearAgo).exec(callback);
+  var Site = require("../models/site").Site
+  //var site_list = Site.find();
+  var sites;
+//  var query = Site.find({}); // (ok in this example, it's all entries)
+//        query.exec(function(err, result) {
+//          if (!err) {
+//            sites = JSON.stringify(result, undefined, 2);
+//          } else {
+//            console.log('Error in second query. ' + err);
+//            sites = "Error";
+//          }
+//        });
 
-  res.render('sites/index', { title: 'Sites', category: category, site_list: collection });
+
+var sites = Site.find({}).exec(function(err, results) {
+        console.log(results);
+        console.log(JSON.stringify(results));
+        res.render('sites/index', { title: 'Sites', category: category, site_list: results });
+      });
+
 });
 
 router.get('/new', function(req, res, next){
@@ -25,8 +45,6 @@ router.get('/new', function(req, res, next){
 
 
 
-
-/* GET home page. */
 router.post('/new', function(req, res, next) {
   //res.render('index', { title: 'Bit Coach' });
   var Site = mongoose.model('Site');
@@ -41,7 +59,7 @@ router.post('/new', function(req, res, next) {
   });
 
   newSite.save(function (err) {if (err) console.log ('Error on save!')});
-  res.send(newSite);
+  res.render('sites');
   });
 
 

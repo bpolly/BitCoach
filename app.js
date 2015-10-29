@@ -48,15 +48,14 @@ app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 var routes = require('./routes/index');
 app.use('/', routes);
-var users = require('./routes/users');
-app.use('/users', users);
 var technologies = require('./routes/technologies');
 app.use('/technologies', technologies);
 var rankings = require('./routes/rankings');
 app.use('/rankings', rankings);
 var sites = require('./routes/site');
 app.use('/sites', sites);
-
+var db_routes = require('./routes/db');
+app.use('/db', db_routes);
 
 
 // catch 404 and forward to error handler

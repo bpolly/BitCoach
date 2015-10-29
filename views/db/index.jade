@@ -1,0 +1,18 @@
+extends ../layout
+
+block extraHeader
+  link(rel='stylesheet', href='/css/site.css')
+block content
+  .container
+    form(name="add-estimation", method="post")
+          div.input
+              span.label Model
+              input(type="text", name="model")
+          div.input
+              span.label Attribute
+              input(type="text", name="attribute")
+          div.input
+              span.label Attribute Value
+              input(type="text", name="attribute_value")
+          div.actions
+              input(type="submit", value="Search")

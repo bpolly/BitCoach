@@ -10,4 +10,7 @@ var siteSchema = new mongoose.Schema({
     rating: {type: Number, default: 0.0 }
   });
 
-mongoose.model('Site', siteSchema); // register model
+var Site = mongoose.model('Site', siteSchema); // register model
+module.exports = {
+  Site: Site
+}
