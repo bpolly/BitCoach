@@ -1,28 +1,31 @@
 extends ../layout
 
+block extraHeader
+  link(rel='stylesheet', href='/css/site.css')
 block content
-  h1= title
-  form(name="add-estimation", method="post")
-        div.input
-            span.label URL
-            input(type="text", name="url")
-        div.input
-            span.label Name
-            textarea(name="description", cols="40", rows="5")
-        div.input
-            span.label Languages
-            input(type="text", name="languages")
-        div.input
-            span.label Paid?
-            input(type="boolean", name="url")
-        div.input
-            span.label Virtual?
-            input(type="boolean", name="url")
-        div.input
-            span.label Price Per Month
-            input(type="double", name="url")
-        div.input
-            span.label Rating
-            input(type="double", name="url")
-        div.actions
-            input(type="submit", value="add")
+  div.container
+    h1 New Site
+    form(name="add-estimation", method="post")
+          div.input
+              span.label URL
+              input(type="text", name="url")
+          div.input
+              span.label Name
+              input(type="text", name="name")
+          div.input
+              span.label Languages
+              input(type="text", name="languages")
+          div.input
+              span.label Paid?
+              input(type="boolean", name="paid")
+          div.input
+              span.label Virtual?
+              input(type="boolean", name="virtual")
+          div.input
+              span.label Price Per Month
+              input(type="number", name="price_per_month")
+          div.input
+              span.label Rating
+              input(type="number", name="rating")
+          div.actions
+              input(type="submit", value="add")

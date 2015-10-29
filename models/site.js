@@ -6,8 +6,8 @@ var siteSchema = new mongoose.Schema({
     languages: [String],
     paid: {type: Boolean, default: false },
     virtual: {type: Boolean, default: true },
-    price_per_month: Double,
-    rating: {type: Double, default: 0.0 }
+    price_per_month: Number,
+    rating: {type: Number, default: 0.0 }
   });
 
 mongoose.model('Site', siteSchema); // register model

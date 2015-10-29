@@ -2,7 +2,6 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/css/style.css')
     doctype html(lang='en')
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')    
@@ -15,11 +14,12 @@ html
     link(href='/css/custom.css', rel='stylesheet')  
     link(href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', rel='stylesheet')
     // Custom styles for this template
-    link(href='css/style.css', rel='stylesheet')
+    link(href='/css/style.css', rel='stylesheet')
     // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     //if lt IE 9
     script(src='/bower_components/bootstrap/dist/javascripts/html5shiv.js')
     script(src='/bower_components/bootstrap/dist/javascripts/respond.min.js')
+    block extraHeader
   body
     #topnav.navbar.navbar-default.navbar-fixed-top
       .container
@@ -39,8 +39,8 @@ html
               a(href='/technologies') Technologies & Frameworks
             li(class=title=='Rankings'?'active':undefined)
               a(href='/rankings') Rankings
-            li(class=title=='Codesites'?'active':undefined)
-              a(href='/codesites') Code Sites
+            li(class=title=='Sites'?'active':undefined)
+              a(href='/sites') Code Sites
 
 
     block content
