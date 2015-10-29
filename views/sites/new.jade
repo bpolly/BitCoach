@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+  h1= title
+  form(name="add-estimation", method="post")
+        div.input
+            span.label URL
+            input(type="text", name="url")
+        div.input
+            span.label Name
+            textarea(name="description", cols="40", rows="5")
+        div.input
+            span.label Languages
+            input(type="text", name="languages")
+        div.input
+            span.label Paid?
+            input(type="boolean", name="url")
+        div.input
+            span.label Virtual?
+            input(type="boolean", name="url")
+        div.input
+            span.label Price Per Month
+            input(type="double", name="url")
+        div.input
+            span.label Rating
+            input(type="double", name="url")
+        div.actions
+            input(type="submit", value="add")

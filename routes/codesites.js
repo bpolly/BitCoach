@@ -11,9 +11,6 @@ router.get('/', function(req, res, next) {
     address: "codesite.com",
     name: "CodeSite1"
   });
-  Codesite.findOne({_id: doc_id}, function(err, document) {
-  console.log(document.name);
-});
   res.render('codesites', {
     title: 'Codesites',
     CSVV: codesite
