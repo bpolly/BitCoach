@@ -49,7 +49,7 @@ router.post('/', function(req, res, next) {
   });
 
 router.get('/remove', function(req, res, next){
-  Site.find({}).remove({'rating':'0'}, function (err) {
+  Site.find({name:'Udacity'}).remove(function (err) {
     if (err) return handleError(err);
       console.log("ENTRIES REMOVED");
   });

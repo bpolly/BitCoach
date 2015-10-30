@@ -14,11 +14,12 @@ block content
       if results != null
         for result in results
           tr
-           td #{result.name}
-           td #{result.url}
-           td #{result.languages}
-           td #{result.paid}
-           td #{result.virtual}
-           td #{result.price_per_month}
-           td #{result.rating}
+           td= result.name
+           td 
+             a(href="http://#{result.url}")= result.url
+           td= result.languages
+           td= result.paid
+           td= result.virtual
+           td= result.price_per_month
+           td= result.rating
     a(href="/db") New Search

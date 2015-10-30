@@ -18,20 +18,7 @@ router.get('/', function(req, res, next) {
   //var collection = mongoose.connection.db.collection('Sites');
   // Tank.find({ size: 'small' }).where('createdDate').gt(oneYearAgo).exec(callback);
   var Site = require("../models/site").Site
-  //var site_list = Site.find();
-  var sites;
-//  var query = Site.find({}); // (ok in this example, it's all entries)
-//        query.exec(function(err, result) {
-//          if (!err) {
-//            sites = JSON.stringify(result, undefined, 2);
-//          } else {
-//            console.log('Error in second query. ' + err);
-//            sites = "Error";
-//          }
-//        });
-
-
-var sites = Site.find({}).exec(function(err, results) {
+  Site.find({}).exec(function(err, results) {
         console.log(results);
         console.log(JSON.stringify(results));
         res.render('sites/index', { title: 'Sites', category: category, site_list: results });
@@ -58,9 +45,12 @@ router.post('/new', function(req, res, next) {
     rating: req.body.rating
   });
 
-  newSite.save(function (err) {if (err) console.log ('Error on save!')});
-  res.render('sites');
+  newSite.save(function (err) {
+    if (err) console.log ('Error on save!')
+    res.redirect('/sites');
   });
+
+});
 
 
 module.exports = router;

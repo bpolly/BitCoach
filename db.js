@@ -1,12 +1,6 @@
 var mongoose = require( 'mongoose' );
 var uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/bit_coach_db';
-
-
-
-
-
 var Schema   = mongoose.Schema;
-
 
 // Makes connection asynchronously.  Mongoose will queue up database
 // operations and release them when the connection is complete.
@@ -17,6 +11,3 @@ mongoose.connect(uristring, function (err, res) {
   console.log ('Succeeded connected to: ' + uristring);
   }
 });
-//mongoose.connect( 'mongodb://localhost/bit_coach_db' );
-// Here we find an appropriate database to connect to, defaulting to
-// localhost if we don't find one.

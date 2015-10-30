@@ -1,8 +1,16 @@
 var mongoose = require('mongoose');
 
 var siteSchema = new mongoose.Schema({
-    url: String,
-    name: String,
+    url: {
+        type: String,
+        unique: true,
+        index: true
+    },
+    name: {
+        type: String,
+        unique: true,
+        index: true
+    },
     languages: [String],
     paid: {type: Boolean, default: false },
     virtual: {type: Boolean, default: true },
