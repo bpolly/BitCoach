@@ -18,21 +18,33 @@ router.get('/', function(req, res, next) {
 
 /* POST home page. Get parameters from DB Search*/
 router.post('/', function(req, res, next) {
-  //var Site = require("../models/site").Site;
-  var site_list;
-  var model = String(req.body.model);
+  var model_choice = String(req.body.model);
+  var model;
+  switch(model_choice.toLowerCase()){
+    case "site":
+      model = Site;
+      break;
+    default:
+      model = Site;
+      break;
+  }
   var attribute = String(req.body.attribute);
   var attribute_value = String(req.body.attribute_value);
+
+  // If query is empty, display all elements from given model_choice
+  // otherwise, perform query
   var query = {};
-  var criteria = attribute;
-  query[criteria] = attribute_value;
-  var sites = Site.find(query).exec(function(err, results) {
+  if(attribute.length > 0 && attribute_value.length > 0){
+    query[attribute] = attribute_value;
+  }
+
+  model.where(query).exec(function(err, results) {
           console.log(query);
           console.log(typeof(attribute));
           console.log(typeof(attribute_value));
           console.log(results);
           console.log(JSON.stringify(results));
-          res.render('db/result', { title: 'DB Search Results', category: category, site_list: results });
+          res.render('db/result', { title: 'DB Search Results', category: category, results: results, model: model_choice.toLowerCase() });
         });
   });
 

@@ -11,12 +11,14 @@ block content
       th Virtual?
       th Price/month
       th Rating
-      for site in site_list
-        tr
-         td #{site.name}
-         td #{site.url}
-         td #{site.languages}
-         td #{site.paid}
-         td #{site.virtual}
-         td #{site.price_per_month}
-         td #{site.rating}
+      if results != null
+        for result in results
+          tr
+           td #{result.name}
+           td #{result.url}
+           td #{result.languages}
+           td #{result.paid}
+           td #{result.virtual}
+           td #{result.price_per_month}
+           td #{result.rating}
+    a(href="/db") New Search

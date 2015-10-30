@@ -13,13 +13,14 @@ block content
       th Rating
       for site in site_list
         tr
-         td #{site.name}
-         td #{site.url}
-         td #{site.languages}
-         td #{site.paid}
-         td #{site.virtual}
-         td #{site.price_per_month}
-         td #{site.rating}
+         td= site.name
+         td 
+           a(href="http://#{site.url}")= site.url
+         td= site.languages
+         td= site.paid
+         td= site.virtual
+         td= site.price_per_month
+         td= site.rating
      
     a(href="/sites/new") New
   
