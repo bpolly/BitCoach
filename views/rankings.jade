@@ -5,105 +5,60 @@ block content
   .container
     // /.row
     // Projects Row
+    -var i = 0
+    while i < sites.length
+        .row
+          .col-md-4.portfolio-item
+            a(href='#')
+              img.img-responsive(src='http://placehold.it/700x400', alt='')
+            h3
+              a(href='#')= sites[i]["name"]
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+          if i+1 < sites.length
+            .col-md-4.portfolio-item
+              a(href='#')
+                img.img-responsive(src='http://placehold.it/700x400', alt='')
+              h3
+                a(href='#')= sites[i+1]["name"]
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+            if i+2 < sites.length
+              .col-md-4.portfolio-item
+                a(href='#')
+                  img.img-responsive(src='http://placehold.it/700x400', alt='')
+                h3
+                  a(href='#')= sites[i+2]["name"]
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+        - i = i + 3
+// /.row
+  hr
+  // Pagination
+  .row.text-center
+    .col-lg-12
+      ul.pagination
+        li
+          a(href='#') «
+        li.active
+          a(href='#') 1
+        li
+          a(href='#') 2
+        li
+          a(href='#') 3
+        li
+          a(href='#') 4
+        li
+          a(href='#') 5
+        li
+          a(href='#') »
+  // /.row
+  hr
+  // Footer
+  footer
     .row
-      .col-md-4.portfolio-item
-        a(href='#')
-          img.img-responsive(src='http://placehold.it/700x400', alt='')
-        h3
-          a(href='#') Team Treehouse
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-      .col-md-4.portfolio-item
-        a(href='#')
-          img.img-responsive(src='http://placehold.it/700x400', alt='')
-        h3
-          a(href='#') Project Name
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-      .col-md-4.portfolio-item
-        a(href='#')
-          img.img-responsive(src='http://placehold.it/700x400', alt='')
-        h3
-          a(href='#') Project Name
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-    // /.row
-    // Projects Row
-    .row
-      .col-md-4.portfolio-item
-        a(href='#')
-          img.img-responsive(src='http://placehold.it/700x400', alt='')
-        h3
-          a(href='#') Project Name
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-      .col-md-4.portfolio-item
-        a(href='#')
-          img.img-responsive(src='http://placehold.it/700x400', alt='')
-        h3
-          a(href='#') Project Name
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-      .col-md-4.portfolio-item
-        a(href='#')
-          img.img-responsive(src='http://placehold.it/700x400', alt='')
-        h3
-          a(href='#') Project Name
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-    // Projects Row
-    .row
-      .col-md-4.portfolio-item
-        a(href='#')
-          img.img-responsive(src='http://placehold.it/700x400', alt='')
-        h3
-          a(href='#') Project Name
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-      .col-md-4.portfolio-item
-        a(href='#')
-          img.img-responsive(src='http://placehold.it/700x400', alt='')
-        h3
-          a(href='#') Project Name
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-      .col-md-4.portfolio-item
-        a(href='#')
-          img.img-responsive(src='http://placehold.it/700x400', alt='')
-        h3
-          a(href='#') Project Name
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
-    // /.row
-    hr
-    // Pagination
-    .row.text-center
       .col-lg-12
-        ul.pagination
-          li
-            a(href='#') «
-          li.active
-            a(href='#') 1
-          li
-            a(href='#') 2
-          li
-            a(href='#') 3
-          li
-            a(href='#') 4
-          li
-            a(href='#') 5
-          li
-            a(href='#') »
-    // /.row
-    hr
-    // Footer
-    footer
-      .row
-        .col-lg-12
-          p Copyright © Your Website 2014
+        p Copyright © Your Website 2014
       // /.row
   // /.container
   // jQuery
-  script(src='js/jquery.js')
-  // Bootstrap Core JavaScript
-  script(src='js/bootstrap.min.js')
