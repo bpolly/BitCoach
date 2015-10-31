@@ -18,7 +18,6 @@ router.get('/', function(req, res, next) {
   //res.render('index', { title: 'Bit Coach' });
   var Site = require("../models/site").Site
   Site.find({}).exec(function(err, results) {
-        console.log(results);
         console.log(JSON.stringify(results));
         res.render('sites/index', { title: 'Sites', category: category, sites: results });
       });
@@ -35,7 +34,6 @@ router.get('/table', function(req, res, next) {
   // Tank.find({ size: 'small' }).where('createdDate').gt(oneYearAgo).exec(callback);
   var Site = require("../models/site").Site
   Site.find({}).exec(function(err, results) {
-        console.log(results);
         console.log(JSON.stringify(results));
         res.render('sites/table', { title: 'Sites Table', category: category, site_list: results });
       });
@@ -95,12 +93,20 @@ router.post('/edit/:site_id', function(req, res, next){
       rating: req.body.rating
     }, function (err, result) {
       //if (err) return handleError(err);
-      console.log('Update result: ', result);
+      console.log('Update result: ', JSON.stringify(result));
       res.redirect('/sites/table');
-  })
+  });
+});
 
 
 
+router.post('/delete/:site_id', function(req, res, next){
+  var Site = require("../models/site").Site;
+  var query = { _id: req.params.site_id };
+  Site.findOneAndRemove(query,function(err, result){
+    console.log('Delete result: ', JSON.stringify(result));
+    res.redirect('/sites/table');
+  });
 });
 
 

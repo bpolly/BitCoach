@@ -12,6 +12,8 @@ block content
       th Price/month
       th Rating
       th ID
+      th Edit
+      th Delete
       for site in site_list
         tr
          td= site.name
@@ -24,7 +26,12 @@ block content
          td= site.rating
          td= site.id
          td
-           a(href="/sites/edit/#{site.id}") Edit
+           a.btn.btn-primary(href="/sites/edit/#{site.id}") Edit
+         //td
+           //a.btn.btn-primary.btn-delete-item(href="") Delete
+         td
+           form(method='POST', action='/sites/delete/#{site.id}')
+            button.btn.btn-danger.btn-delete-item(type='submit') Delete
      
     a(href="/sites/new") New
   
