@@ -1,26 +1,64 @@
 extends ../layout
 
 block content
+  // Page Content
   .container
-    h3 Current DB Entries:
-    table.table
-      th Name
-      th URL
-      th Lanuages
-      th Paid?
-      th Virtual?
-      th Price/month
-      th Rating
-      for site in site_list
-        tr
-         td= site.name
-         td 
-           a(href="http://#{site.url}")= site.url
-         td= site.languages
-         td= site.paid
-         td= site.virtual
-         td= site.price_per_month
-         td= site.rating
-     
-    a(href="/sites/new") New
-  
+    // /.row
+    // Projects Row
+    -var i = 0
+    while i < sites.length
+        .row
+          .col-md-4.portfolio-item
+            a(href='#')
+              img.img-responsive(src='http://placehold.it/700x400', alt='')
+            h3
+              a(href='#')= sites[i]["name"]
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+          if i+1 < sites.length
+            .col-md-4.portfolio-item
+              a(href='#')
+                img.img-responsive(src='http://placehold.it/700x400', alt='')
+              h3
+                a(href='#')= sites[i+1]["name"]
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+            if i+2 < sites.length
+              .col-md-4.portfolio-item
+                a(href='#')
+                  img.img-responsive(src='http://placehold.it/700x400', alt='')
+                h3
+                  a(href='#')= sites[i+2]["name"]
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+        - i = i + 3
+// /.row
+  hr
+  // Pagination
+  .row.text-center
+    .col-lg-12
+      ul.pagination
+        li
+          a(href='#') «
+        li.active
+          a(href='#') 1
+        li
+          a(href='#') 2
+        li
+          a(href='#') 3
+        li
+          a(href='#') 4
+        li
+          a(href='#') 5
+        li
+          a(href='#') »
+  // /.row
+  hr
+  // Footer
+  footer
+    .row
+      .col-lg-12
+        p Copyright © Your Website 2014
+      // /.row
+  // /.container
+  // jQuery

@@ -4,28 +4,28 @@ block extraHeader
   link(rel='stylesheet', href='/css/site.css')
 block content
   .container
-    form(name="add-estimation", method="post")
+    form(name="edit_site", method="post")
           div.input
               span.label URL
-              input(type="text", name="url")
+              input(type="text", name="url", value="#{site.url}")
           div.input
               span.label Name
-              input(type="text", name="name")
+              input(type="text", name="name", value="#{site.name}")
           div.input
               span.label Languages
-              input(type="text", name="languages")
+              input(type="text", name="languages", value="#{site.languages}")
           div.input
               span.label Paid?
-              input(type="boolean", name="paid")
+              input(type="boolean", name="paid", value="#{site.paid}")
           div.input
               span.label Virtual?
-              input(type="boolean", name="virtual")
+              input(type="boolean", name="virtual", value="#{site.virtual}")
           div.input
               span.label Price Per Month
-              input(type="number", name="price_per_month")
+              input(type="number", name="price_per_month", value="#{site.price_per_month}")
           div.input
               span.label Rating
-              input(type="number", name="rating")
+              input(type="number", name="rating", value="#{site.rating}")
           div.input
               span.label Long Description
               input(type="text", name="long_description")
@@ -40,4 +40,4 @@ block content
               input(type="text", name="large_banner_path")
               
           div.actions
-              input(type="submit", value="add")
+              input(type="submit", value="update")

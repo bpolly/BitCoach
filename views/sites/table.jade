@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+  .container
+    h3 Current DB Entries:
+    table.table
+      th Name
+      th URL
+      th Lanuages
+      th Paid?
+      th Virtual?
+      th Price/month
+      th Rating
+      th ID
+      for site in site_list
+        tr
+         td= site.name
+         td 
+           a(href="http://#{site.url}")= site.url
+         td= site.languages
+         td= site.paid
+         td= site.virtual
+         td= site.price_per_month
+         td= site.rating
+         td= site.id
+         td
+           a(href="/sites/edit/#{site.id}") Edit
+     
+    a(href="/sites/new") New
+  

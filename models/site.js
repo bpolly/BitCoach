@@ -15,7 +15,11 @@ var siteSchema = new mongoose.Schema({
     paid: {type: Boolean, default: false },
     virtual: {type: Boolean, default: true },
     price_per_month: Number,
-    rating: {type: Number, default: 0.0 }
+    rating: {type: Number, default: 0.0 },
+    long_description: String,
+    short_description: String,
+    thumbnail_path: String,
+    large_banner_path: String
   });
 
 var Site = mongoose.model('Site', siteSchema); // register model
