@@ -17,8 +17,12 @@ html
     link(href='/css/style.css', rel='stylesheet')
     // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     //if lt IE 9
-    script(src='/bower_components/bootstrap/dist/javascripts/html5shiv.js')
-    script(src='/bower_components/bootstrap/dist/javascripts/respond.min.js')
+    //script(src='/bower_components/bootstrap/dist/javascripts/html5shiv.js')
+    //script(src='/bower_components/bootstrap/dist/javascripts/respond.min.js')
+    script(src='http://code.jquery.com/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+
     block extraHeader
   body
     // Navbar
@@ -40,8 +44,30 @@ html
               a(href='/technologies') Technologies & Frameworks
             li(class=title=='Rankings'?'active':undefined)
               a(href='/rankings') Rankings
-            li(class=category=='Sites'?'active':undefined)
-              a(href='/sites') Sites
+            li.dropdown(class=category=='Sites'?'active':undefined)
+              a.dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Sites 
+                span.caret
+              |           
+              ul.dropdown-menu
+                li
+                  a(href='/sites') List
+                |             
+                li
+                  a(href='/sites/table') Table
+                |             
+                li
+                  a(href='#') Something else here
+                |             
+                li.divider(role='separator')
+                |             
+                li
+                  a(href='#') Separated link
+                |             
+                li.divider(role='separator')
+                |             
+                li
+                  a(href='#') One more separated link
             li(class=category=='DB'?'active':undefined)
               a(href='/db') DB
     
@@ -54,3 +80,9 @@ html
               =title
     
     block content
+    
+    //
+       Bootstrap core JavaScript
+    // Placed at the end of the document so the pages load faster
+    script(src="/javascripts/jquery.js")
+    script(src="/javascripts/bootstrap.min.js")
