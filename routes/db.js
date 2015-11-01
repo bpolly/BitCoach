@@ -74,12 +74,19 @@ router.post('/', function(req, res, next) {
   }
 });
 
+// Test route I use to specifically remove elements
 router.get('/remove', function(req, res, next){
-  Site.find({name:'Udacity'}).remove(function (err) {
+  Site.find({name:'Udacity111'}).remove(function (err) {
     if (err) return handleError(err);
       console.log("ENTRIES REMOVED");
   });
   res.send("deleted");
+});
+
+// Test route to seed DB
+router.get('/seed/confirm', function(req, res, next){
+  require('../db_seeds/site_seed.js');
+  res.send("DB Seeded");
 });
 
 module.exports = router;
