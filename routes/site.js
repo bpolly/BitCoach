@@ -6,7 +6,7 @@ var site = require('../models/site');
 var mongoose = require('mongoose');
 var util = require('util');
 var category = "Sites";
-var json
+//var json
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());

@@ -42,10 +42,9 @@ var sites = require('./routes/site');
 app.use('/sites', sites);
 var db_routes = require('./routes/db');
 app.use('/db', db_routes);
+var search_routes = require('./routes/search');
+app.use('/search', search_routes);
 
-
-var methodOverride = require('method-override');
-app.use(methodOverride('_method'));
 
 
 // catch 404 and forward to error handler

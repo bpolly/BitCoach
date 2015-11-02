@@ -70,9 +70,9 @@ html
                   a(href='#') One more separated link
             li(class=category=='DB'?'active':undefined)
               a(href='/db') DB
-          form.navbar-form.navbar-right(role='search')
+          form.navbar-form.navbar-right(role='search', action="/search", method="post")
             .form-group
-              input.form-control(type='text', placeholder='Search')            
+              input.form-control(type='text', placeholder='Search', name="search_input")            
               button.btn.btn-default(type='submit',style="margin-left: -5px") 
                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 

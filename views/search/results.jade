@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  .container
+    h3 Current DB Entries:
+    table.table
+      th Name
+      th URL
+      th Lanuages
+      th Paid?
+      th Virtual?
+      th Price/month
+      th Rating
+      if results != null
+        for result in results
+          tr
+           td= result.name
+           td 
+             a(href="http://#{result.url}")= result.url
+           td
+            for language in result.languages
+              =language+", "
+           td= result.paid
+           td= result.virtual
+           td= result.price_per_month
+           td= result.rating
+    a(href="/") New Search
