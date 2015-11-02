@@ -70,6 +70,13 @@ html
                   a(href='#') One more separated link
             li(class=category=='DB'?'active':undefined)
               a(href='/db') DB
+          form.navbar-form.navbar-right(role='search')
+            .form-group
+              input.form-control(type='text', placeholder='Search')            
+              button.btn.btn-default(type='submit',style="margin-left: -5px") 
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+
+                  
     
     // Page Header
     if title != "Home"
