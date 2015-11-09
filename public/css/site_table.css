@@ -1,0 +1,12 @@
+#site_table td{
+  vertical-align: middle;
+}
+
+#table_col {
+  min-width: 100px;
+  max-width: 100px;
+}
+
+img {
+  height: 45px;
+}

@@ -4,40 +4,52 @@ block extraHeader
   link(rel='stylesheet', href='/css/site.css')
 block content
   .container
-    form(name="edit_site", method="post")
-          div.input
-              span.label URL
-              input(type="text", name="url", value="#{site.url}")
-          div.input
-              span.label Name
-              input(type="text", name="name", value="#{site.name}")
-          div.input
-              span.label Languages
-              input(type="text", name="languages", value="#{site.languages}")
-          div.input
-              span.label Paid?
-              input(type="boolean", name="paid", value="#{site.paid}")
-          div.input
-              span.label Virtual?
-              input(type="boolean", name="virtual", value="#{site.virtual}")
-          div.input
-              span.label Price Per Month
-              input(type="number", name="price_per_month", value="#{site.price_per_month}")
-          div.input
-              span.label Rating
-              input(type="number", name="rating", value="#{site.rating}")
-          div.input
-              span.label Long Description
-              input(type="text", name="long_description")
-          div.input
-              span.label Short Description
-              input(type="text", name="short_description")
-          div.input
-              span.label Thumbnail File Path
-              input(type="text", name="thumbnail_path")
-          div.input
-              span.label Large Banner File Path
-              input(type="text", name="large_banner_path")
+    form(name="edit_site" class="form-horizontal", method="post")
+          .form-group
+              label.col-sm-2.control-label URL
+              .col-sm-10
+                input.form-control(type="text", name="url", value="#{site.url}")
+          .form-group
+              label.col-sm-2.control-label Name
+              .col-sm-10
+                input.form-control(type="text", name="name", value="#{site.name}")
+          .form-group
+              label.col-sm-2.control-label Languages
+              .col-sm-10
+                input.form-control(type="text", name="languages", value="#{site.languages}")
+          .form-group
+              label.col-sm-2.control-label Paid?
+              .col-sm-10
+                input.form-control(type="boolean", name="paid", value="#{site.paid}")
+          .form-group
+              label.col-sm-2.control-label Virtual?
+              .col-sm-10
+                input.form-control(type="boolean", name="virtual", value="#{site.virtual}")
+          .form-group
+              label.col-sm-2.control-label Price Per Month
+              .col-sm-10
+                input.form-control(type="number", name="price_per_month", value="#{site.price_per_month}")
+          .form-group
+              label.col-sm-2.control-label Rating
+              .col-sm-10
+                input.form-control(type="number", name="rating", value="#{site.rating}")
+          .form-group
+              label.col-sm-2.control-label Long Description
+              .col-sm-10
+                input.form-control(type="text", name="long_description", value="#{site.long_description}")
+          .form-group
+              label.col-sm-2.control-label Short Description
+              .col-sm-10
+                input.form-control(type="text", name="short_description", value="#{site.short_description}")
+          .form-group
+              label.col-sm-2.control-label Thumbnail File Path
+              .col-sm-10
+                  input.form-control(type="text", name="thumbnail_path", value="#{site.thumbnail_path}")
+          .form-group
+              label.col-sm-2.control-label Large Banner File Path
+              .col-sm-10
+                input.form-control(type="text", name="large_banner_path", value="#{site.large_banner_path}")
               
-          div.actions
-              input(type="submit", value="update")
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              button.btn.btn-default(type='submit', value="update") Submit

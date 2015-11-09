@@ -33,7 +33,7 @@ router.get('/table', function(req, res, next) {
   //var collection = mongoose.connection.db.collection('Sites');
   // Tank.find({ size: 'small' }).where('createdDate').gt(oneYearAgo).exec(callback);
   var Site = require("../models/site").Site
-  Site.find({}).exec(function(err, results) {
+  Site.find({}).sort({ 'rating' : 'descending'}).exec(function(err, results) {
         console.log(JSON.stringify(results));
         res.render('sites/table', { title: 'Sites Table', category: category, site_list: results });
       });
@@ -90,7 +90,11 @@ router.post('/edit/:site_id', function(req, res, next){
       paid: req.body.paid,
       virtual: req.body.virtual,
       price_per_month: req.body.price_per_month,
-      rating: req.body.rating
+      rating: req.body.rating,
+      long_description: req.body.long_description,
+      short_description: req.body.short_description,
+      thumbnail_path: req.body.thumbnail_path,
+      large_banner_path: req.body.large_banner_path
     }, function (err, result) {
       //if (err) return handleError(err);
       console.log('Update result: ', JSON.stringify(result));
@@ -107,6 +111,11 @@ router.post('/delete/:site_id', function(req, res, next){
     console.log('Delete result: ', JSON.stringify(result));
     res.redirect('/sites/table');
   });
+});
+
+
+router.get('/show', function(req, res, next){
+  res.render('sites/show');
 });
 
 

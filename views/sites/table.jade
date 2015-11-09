@@ -1,37 +1,40 @@
 extends ../layout
 
+block extraHeader
+  link(href='/css/site_table.css', rel='stylesheet')  
+
 block content
-  .container
-    h3 Current DB Entries:
-    table.table
-      th Name
-      th URL
-      th Lanuages
-      th Paid?
-      th Virtual?
-      th Price/month
-      th Rating
-      th ID
-      th Edit
-      th Delete
-      for site in site_list
-        tr
-         td= site.name
-         td 
-           a(href="http://#{site.url}")= site.url
-         td= site.languages
-         td= site.paid
-         td= site.virtual
-         td= site.price_per_month
-         td= site.rating
-         td= site.id
-         td
-           a.btn.btn-primary(href="/sites/edit/#{site.id}") Edit
-         //td
-           //a.btn.btn-primary.btn-delete-item(href="") Delete
-         td
-           form(method='POST', action='/sites/delete/#{site.id}')
-            button.btn.btn-danger.btn-delete-item(type='submit') Delete
-     
-    a(href="/sites/new") New
-  
+  table#site_table.table.table-striped.table-responsive
+    th(id="table_col")
+    //th Name
+    th URL
+    //th(style="width: 10px;") Languages
+    th Paid?
+    th Virtual?
+    th Price/month
+    th Rating
+    //th ID
+    th Edit
+    th Delete
+    for site in site_list
+      tr
+       td
+         img(src='#{site.thumbnail_path}', alt='#{site.name}', height="100px")  
+       //td= site.name
+       td 
+         a(href="http://#{site.url}")= site.url
+       //td= site.languages
+       td= site.paid
+       td= site.virtual
+       td= site.price_per_month
+       td= site.rating
+       //td= site.id
+       td
+         a.btn.btn-primary(href="/sites/edit/#{site.id}") Edit
+       //td
+         //a.btn.btn-primary.btn-delete-item(href="") Delete
+       td
+         form(method='POST', action='/sites/delete/#{site.id}')
+          button.btn.btn-danger.btn-delete-item(type='submit') Delete
+   
+  a(href="/sites/new") New

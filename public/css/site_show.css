@@ -1,0 +1,50 @@
+html,body {
+  height: 100%;
+}
+.col-md-2, .col-md-10 {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.right_content {
+  background-color: rgb(252, 252, 252);
+  height: 100%;
+}
+
+#left_side_bar {
+  border-right: 1px solid rgb(255, 89, 174);
+}
+
+#left_side_bar h4 {
+  color: white;
+  background-color: #f2006b;
+  padding: 5px 0;
+  margin-bottom: 0;
+  margin-top: 21px;
+  line-height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid rgb(35, 147, 189);
+}
+
+#left_side_bar table {
+    background-color: rgb(0, 36, 54);
+    color: white;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
+{
+  border-top: 0;
+}
+
+.jumbotron {
+  margin-top: 13px;
+  font-family: lato !important;
+  background-color: #7EBD42;
+  color: white;
+  padding: 0px 10px;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgb(0, 36, 54);
+  vertical-align: middle;
+}

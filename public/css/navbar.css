@@ -1,0 +1,24 @@
+.navbar a{
+  font-family: lato !important;
+}
+
+@font-face {
+    font-family: lato;
+    src: url(/fonts/lato/lato-regular.ttf);
+}
+
+.form-control{
+  -webkit-border-radius: 5;
+     -moz-border-radius: 5;
+          border-radius: 5;
+}
+
+.nvbar-form input #search_key.form-control, .input-group .form-control:not(:first-child):not(:last-child)
+{
+  border-radius: 5px !important;
+}
+
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    z-index: 2;
+    margin-left: -10px;
+}

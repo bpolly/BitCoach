@@ -1,0 +1,681 @@
+.form-control::-moz-placeholder,
+.select2-search input[type="text"]::-moz-placeholder {
+  color: #b2bcc5;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder,
+.select2-search input[type="text"]:-ms-input-placeholder {
+  color: #b2bcc5;
+}
+.form-control::-webkit-input-placeholder,
+.select2-search input[type="text"]::-webkit-input-placeholder {
+  color: #b2bcc5;
+}
+.form-control,
+.select2-search input[type="text"] {
+  border: 2px solid #bdc3c7;
+  color: #34495e;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.467;
+  padding: 8px 12px;
+  height: 42px;
+  border-radius: 6px;
+  box-shadow: none;
+  -webkit-transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+          transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+}
+.form-group.focus .form-control,
+.form-control:focus,
+.form-group.focus .select2-search input[type="text"],
+.select2-search input[type="text"]:focus {
+  border-color: #1abc9c;
+  outline: 0;
+  box-shadow: none;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control,
+.select2-search input[type="text"][disabled],
+.select2-search input[type="text"][readonly],
+fieldset[disabled] .select2-search input[type="text"] {
+  background-color: #f4f6f6;
+  border-color: #d5dbdb;
+  color: #d5dbdb;
+  cursor: default;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.form-control.flat,
+.select2-search input[type="text"].flat {
+  border-color: transparent;
+}
+.form-control.flat:hover,
+.select2-search input[type="text"].flat:hover {
+  border-color: #bdc3c7;
+}
+.form-control.flat:focus,
+.select2-search input[type="text"].flat:focus {
+  border-color: #1abc9c;
+}
+.input-sm,
+.form-group-sm .form-control,
+.form-group-sm .select2-search input[type="text"],
+.select2-search input[type="text"] {
+  height: 35px;
+  padding: 6px 10px;
+  font-size: 13px;
+  line-height: 1.462;
+  border-radius: 6px;
+}
+select.input-sm,
+select.form-group-sm .form-control,
+select.form-group-sm .select2-search input[type="text"],
+select.select2-search input[type="text"] {
+  height: 35px;
+  line-height: 35px;
+}
+textarea.input-sm,
+textarea.form-group-sm .form-control,
+select[multiple].input-sm,
+select[multiple].form-group-sm .form-control,
+textarea.form-group-sm .select2-search input[type="text"],
+select[multiple].form-group-sm .select2-search input[type="text"],
+textarea.select2-search input[type="text"],
+select[multiple].select2-search input[type="text"] {
+  height: auto;
+}
+.input-lg,
+.form-group-lg .form-control,
+.form-group-lg .select2-search input[type="text"] {
+  height: 45px;
+  padding: 10px 15px;
+  font-size: 17px;
+  line-height: 1.235;
+  border-radius: 6px;
+}
+select.input-lg,
+select.form-group-lg .form-control,
+select.form-group-lg .select2-search input[type="text"] {
+  height: 45px;
+  line-height: 45px;
+}
+textarea.input-lg,
+textarea.form-group-lg .form-control,
+select[multiple].input-lg,
+select[multiple].form-group-lg .form-control,
+textarea.form-group-lg .select2-search input[type="text"],
+select[multiple].form-group-lg .select2-search input[type="text"] {
+  height: auto;
+}
+.input-hg,
+.form-group-hg .form-control,
+.form-horizontal .form-group-hg .form-control,
+.form-group-hg .select2-search input[type="text"],
+.form-horizontal .form-group-hg .select2-search input[type="text"] {
+  height: 53px;
+  padding: 10px 16px;
+  font-size: 22px;
+  line-height: 1.318;
+  border-radius: 6px;
+}
+select.input-hg,
+select.form-group-hg .form-control,
+select.form-group-hg .select2-search input[type="text"] {
+  height: 53px;
+  line-height: 53px;
+}
+textarea.input-hg,
+textarea.form-group-hg .form-control,
+select[multiple].input-hg,
+select[multiple].form-group-hg .form-control,
+textarea.form-group-hg .select2-search input[type="text"],
+select[multiple].form-group-hg .select2-search input[type="text"] {
+  height: auto;
+}
+.form-control-feedback {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  margin-top: 1px;
+  line-height: 36px;
+  font-size: 17px;
+  color: #b2bcc5;
+  background-color: transparent;
+  padding: 0 12px 0 0;
+  border-radius: 6px;
+  pointer-events: none;
+}
+.input-hg + .form-control-feedback,
+.control-feedback-hg {
+  font-size: 20px;
+  line-height: 48px;
+  padding-right: 16px;
+  width: auto;
+  height: 48px;
+}
+.input-lg + .form-control-feedback,
+.control-feedback-lg {
+  font-size: 18px;
+  line-height: 40px;
+  width: auto;
+  height: 40px;
+  padding-right: 15px;
+}
+.input-sm + .form-control-feedback,
+.control-feedback-sm,
+.select2-search input[type="text"] + .form-control-feedback {
+  line-height: 29px;
+  height: 29px;
+  width: auto;
+  padding-right: 10px;
+}
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline {
+  color: #2ecc71;
+}
+.has-success .form-control,
+.has-success .select2-search input[type="text"] {
+  color: #2ecc71;
+  border-color: #2ecc71;
+  box-shadow: none;
+}
+.has-success .form-control::-moz-placeholder,
+.has-success .select2-search input[type="text"]::-moz-placeholder {
+  color: #2ecc71;
+  opacity: 1;
+}
+.has-success .form-control:-ms-input-placeholder,
+.has-success .select2-search input[type="text"]:-ms-input-placeholder {
+  color: #2ecc71;
+}
+.has-success .form-control::-webkit-input-placeholder,
+.has-success .select2-search input[type="text"]::-webkit-input-placeholder {
+  color: #2ecc71;
+}
+.has-success .form-control:focus,
+.has-success .select2-search input[type="text"]:focus {
+  border-color: #2ecc71;
+  box-shadow: none;
+}
+.has-success .input-group-addon {
+  color: #2ecc71;
+  border-color: #2ecc71;
+  background-color: #ffffff;
+}
+.has-success .form-control-feedback {
+  color: #2ecc71;
+}
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline {
+  color: #f1c40f;
+}
+.has-warning .form-control,
+.has-warning .select2-search input[type="text"] {
+  color: #f1c40f;
+  border-color: #f1c40f;
+  box-shadow: none;
+}
+.has-warning .form-control::-moz-placeholder,
+.has-warning .select2-search input[type="text"]::-moz-placeholder {
+  color: #f1c40f;
+  opacity: 1;
+}
+.has-warning .form-control:-ms-input-placeholder,
+.has-warning .select2-search input[type="text"]:-ms-input-placeholder {
+  color: #f1c40f;
+}
+.has-warning .form-control::-webkit-input-placeholder,
+.has-warning .select2-search input[type="text"]::-webkit-input-placeholder {
+  color: #f1c40f;
+}
+.has-warning .form-control:focus,
+.has-warning .select2-search input[type="text"]:focus {
+  border-color: #f1c40f;
+  box-shadow: none;
+}
+.has-warning .input-group-addon {
+  color: #f1c40f;
+  border-color: #f1c40f;
+  background-color: #ffffff;
+}
+.has-warning .form-control-feedback {
+  color: #f1c40f;
+}
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline {
+  color: #e74c3c;
+}
+.has-error .form-control,
+.has-error .select2-search input[type="text"] {
+  color: #e74c3c;
+  border-color: #e74c3c;
+  box-shadow: none;
+}
+.has-error .form-control::-moz-placeholder,
+.has-error .select2-search input[type="text"]::-moz-placeholder {
+  color: #e74c3c;
+  opacity: 1;
+}
+.has-error .form-control:-ms-input-placeholder,
+.has-error .select2-search input[type="text"]:-ms-input-placeholder {
+  color: #e74c3c;
+}
+.has-error .form-control::-webkit-input-placeholder,
+.has-error .select2-search input[type="text"]::-webkit-input-placeholder {
+  color: #e74c3c;
+}
+.has-error .form-control:focus,
+.has-error .select2-search input[type="text"]:focus {
+  border-color: #e74c3c;
+  box-shadow: none;
+}
+.has-error .input-group-addon {
+  color: #e74c3c;
+  border-color: #e74c3c;
+  background-color: #ffffff;
+}
+.has-error .form-control-feedback {
+  color: #e74c3c;
+}
+.form-control[disabled] + .form-control-feedback,
+.form-control[readonly] + .form-control-feedback,
+fieldset[disabled] .form-control + .form-control-feedback,
+.form-control.disabled + .form-control-feedback,
+.select2-search input[type="text"][disabled] + .form-control-feedback,
+.select2-search input[type="text"][readonly] + .form-control-feedback,
+fieldset[disabled] .select2-search input[type="text"] + .form-control-feedback,
+.select2-search input[type="text"].disabled + .form-control-feedback {
+  cursor: not-allowed;
+  color: #d5dbdb;
+  background-color: transparent;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.help-block {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #6b7a88;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+.form-horizontal .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.form-horizontal .form-control-static {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+@media (min-width: 768px) {
+  .form-horizontal .form-group-hg .control-label {
+    font-size: 22px;
+    padding-top: 2px;
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .form-horizontal .form-group-lg .control-label {
+    font-size: 17px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+  }
+}
+@media (min-width: 768px) {
+  .form-horizontal .form-group-sm .control-label {
+    font-size: 13px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
+.input-group .form-control,
+.input-group .select2-search input[type="text"] {
+  position: static;
+}
+.input-group-hg > .form-control,
+.input-group-hg > .input-group-addon,
+.input-group-hg > .input-group-btn > .btn,
+.input-group-hg > .select2-search input[type="text"] {
+  height: 53px;
+  padding: 10px 16px;
+  font-size: 22px;
+  line-height: 1.318;
+  border-radius: 6px;
+}
+select.input-group-hg > .form-control,
+select.input-group-hg > .input-group-addon,
+select.input-group-hg > .input-group-btn > .btn,
+select.input-group-hg > .select2-search input[type="text"] {
+  height: 53px;
+  line-height: 53px;
+}
+textarea.input-group-hg > .form-control,
+textarea.input-group-hg > .input-group-addon,
+textarea.input-group-hg > .input-group-btn > .btn,
+select[multiple].input-group-hg > .form-control,
+select[multiple].input-group-hg > .input-group-addon,
+select[multiple].input-group-hg > .input-group-btn > .btn,
+textarea.input-group-hg > .select2-search input[type="text"],
+select[multiple].input-group-hg > .select2-search input[type="text"] {
+  height: auto;
+}
+.input-group-lg > .form-control,
+.input-group-lg > .input-group-addon,
+.input-group-lg > .input-group-btn > .btn,
+.input-group-lg > .select2-search input[type="text"] {
+  height: 45px;
+  padding: 10px 15px;
+  font-size: 17px;
+  line-height: 1.235;
+  border-radius: 6px;
+}
+select.input-group-lg > .form-control,
+select.input-group-lg > .input-group-addon,
+select.input-group-lg > .input-group-btn > .btn,
+select.input-group-lg > .select2-search input[type="text"] {
+  height: 45px;
+  line-height: 45px;
+}
+textarea.input-group-lg > .form-control,
+textarea.input-group-lg > .input-group-addon,
+textarea.input-group-lg > .input-group-btn > .btn,
+select[multiple].input-group-lg > .form-control,
+select[multiple].input-group-lg > .input-group-addon,
+select[multiple].input-group-lg > .input-group-btn > .btn,
+textarea.input-group-lg > .select2-search input[type="text"],
+select[multiple].input-group-lg > .select2-search input[type="text"] {
+  height: auto;
+}
+.input-group-sm > .form-control,
+.input-group-sm > .input-group-addon,
+.input-group-sm > .input-group-btn > .btn,
+.input-group-sm > .select2-search input[type="text"] {
+  height: 35px;
+  padding: 6px 10px;
+  font-size: 13px;
+  line-height: 1.462;
+  border-radius: 6px;
+}
+select.input-group-sm > .form-control,
+select.input-group-sm > .input-group-addon,
+select.input-group-sm > .input-group-btn > .btn,
+select.input-group-sm > .select2-search input[type="text"] {
+  height: 35px;
+  line-height: 35px;
+}
+textarea.input-group-sm > .form-control,
+textarea.input-group-sm > .input-group-addon,
+textarea.input-group-sm > .input-group-btn > .btn,
+select[multiple].input-group-sm > .form-control,
+select[multiple].input-group-sm > .input-group-addon,
+select[multiple].input-group-sm > .input-group-btn > .btn,
+textarea.input-group-sm > .select2-search input[type="text"],
+select[multiple].input-group-sm > .select2-search input[type="text"] {
+  height: auto;
+}
+.input-group-addon {
+  padding: 10px 12px;
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #bdc3c7;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  -webkit-transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+          transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+}
+.input-group-hg .input-group-addon,
+.input-group-lg .input-group-addon,
+.input-group-sm .input-group-addon {
+  line-height: 1;
+}
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group .select2-search input[type="text"]:first-child {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .dropdown-toggle,
+.input-group-btn:first-child > .btn:not(:first-child),
+.input-group .select2-search input[type="text"]:last-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.form-group.focus .input-group-addon,
+.input-group.focus .input-group-addon {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+.form-group.focus .input-group-btn > .btn-default + .btn-default,
+.input-group.focus .input-group-btn > .btn-default + .btn-default {
+  border-left-color: #16a085;
+}
+.form-group.focus .input-group-btn .btn,
+.input-group.focus .input-group-btn .btn {
+  border-color: #1abc9c;
+  background-color: #ffffff;
+  color: #1abc9c;
+}
+.form-group.focus .input-group-btn .btn-default,
+.input-group.focus .input-group-btn .btn-default {
+  color: #ffffff;
+  background-color: #1abc9c;
+}
+.form-group.focus .input-group-btn .btn-default:hover,
+.input-group.focus .input-group-btn .btn-default:hover,
+.form-group.focus .input-group-btn .btn-default.hover,
+.input-group.focus .input-group-btn .btn-default.hover,
+.form-group.focus .input-group-btn .btn-default:focus,
+.input-group.focus .input-group-btn .btn-default:focus,
+.form-group.focus .input-group-btn .btn-default:active,
+.input-group.focus .input-group-btn .btn-default:active,
+.form-group.focus .input-group-btn .btn-default.active,
+.input-group.focus .input-group-btn .btn-default.active,
+.open > .dropdown-toggle.form-group.focus .input-group-btn .btn-default,
+.open > .dropdown-toggle.input-group.focus .input-group-btn .btn-default {
+  color: #ffffff;
+  background-color: #48c9b0;
+  border-color: #48c9b0;
+}
+.form-group.focus .input-group-btn .btn-default:active,
+.input-group.focus .input-group-btn .btn-default:active,
+.form-group.focus .input-group-btn .btn-default.active,
+.input-group.focus .input-group-btn .btn-default.active,
+.open > .dropdown-toggle.form-group.focus .input-group-btn .btn-default,
+.open > .dropdown-toggle.input-group.focus .input-group-btn .btn-default {
+  background: #16a085;
+  border-color: #16a085;
+}
+.form-group.focus .input-group-btn .btn-default.disabled,
+.input-group.focus .input-group-btn .btn-default.disabled,
+.form-group.focus .input-group-btn .btn-default[disabled],
+.input-group.focus .input-group-btn .btn-default[disabled],
+fieldset[disabled] .form-group.focus .input-group-btn .btn-default,
+fieldset[disabled] .input-group.focus .input-group-btn .btn-default,
+.form-group.focus .input-group-btn .btn-default.disabled:hover,
+.input-group.focus .input-group-btn .btn-default.disabled:hover,
+.form-group.focus .input-group-btn .btn-default[disabled]:hover,
+.input-group.focus .input-group-btn .btn-default[disabled]:hover,
+fieldset[disabled] .form-group.focus .input-group-btn .btn-default:hover,
+fieldset[disabled] .input-group.focus .input-group-btn .btn-default:hover,
+.form-group.focus .input-group-btn .btn-default.disabled.hover,
+.input-group.focus .input-group-btn .btn-default.disabled.hover,
+.form-group.focus .input-group-btn .btn-default[disabled].hover,
+.input-group.focus .input-group-btn .btn-default[disabled].hover,
+fieldset[disabled] .form-group.focus .input-group-btn .btn-default.hover,
+fieldset[disabled] .input-group.focus .input-group-btn .btn-default.hover,
+.form-group.focus .input-group-btn .btn-default.disabled:focus,
+.input-group.focus .input-group-btn .btn-default.disabled:focus,
+.form-group.focus .input-group-btn .btn-default[disabled]:focus,
+.input-group.focus .input-group-btn .btn-default[disabled]:focus,
+fieldset[disabled] .form-group.focus .input-group-btn .btn-default:focus,
+fieldset[disabled] .input-group.focus .input-group-btn .btn-default:focus,
+.form-group.focus .input-group-btn .btn-default.disabled:active,
+.input-group.focus .input-group-btn .btn-default.disabled:active,
+.form-group.focus .input-group-btn .btn-default[disabled]:active,
+.input-group.focus .input-group-btn .btn-default[disabled]:active,
+fieldset[disabled] .form-group.focus .input-group-btn .btn-default:active,
+fieldset[disabled] .input-group.focus .input-group-btn .btn-default:active,
+.form-group.focus .input-group-btn .btn-default.disabled.active,
+.input-group.focus .input-group-btn .btn-default.disabled.active,
+.form-group.focus .input-group-btn .btn-default[disabled].active,
+.input-group.focus .input-group-btn .btn-default[disabled].active,
+fieldset[disabled] .form-group.focus .input-group-btn .btn-default.active,
+fieldset[disabled] .input-group.focus .input-group-btn .btn-default.active {
+  background-color: #bdc3c7;
+  border-color: #1abc9c;
+}
+.form-group.focus .input-group-btn .btn-default .badge,
+.input-group.focus .input-group-btn .btn-default .badge {
+  color: #1abc9c;
+  background-color: #ffffff;
+}
+.input-group-btn .btn {
+  background-color: #ffffff;
+  border: 2px solid #bdc3c7;
+  color: #bdc3c7;
+  line-height: 18px;
+  height: 42px;
+}
+.input-group-btn .btn-default {
+  color: #ffffff;
+  background-color: #bdc3c7;
+}
+.input-group-btn .btn-default:hover,
+.input-group-btn .btn-default.hover,
+.input-group-btn .btn-default:focus,
+.input-group-btn .btn-default:active,
+.input-group-btn .btn-default.active,
+.open > .dropdown-toggle.input-group-btn .btn-default {
+  color: #ffffff;
+  background-color: #cacfd2;
+  border-color: #cacfd2;
+}
+.input-group-btn .btn-default:active,
+.input-group-btn .btn-default.active,
+.open > .dropdown-toggle.input-group-btn .btn-default {
+  background: #a1a6a9;
+  border-color: #a1a6a9;
+}
+.input-group-btn .btn-default.disabled,
+.input-group-btn .btn-default[disabled],
+fieldset[disabled] .input-group-btn .btn-default,
+.input-group-btn .btn-default.disabled:hover,
+.input-group-btn .btn-default[disabled]:hover,
+fieldset[disabled] .input-group-btn .btn-default:hover,
+.input-group-btn .btn-default.disabled.hover,
+.input-group-btn .btn-default[disabled].hover,
+fieldset[disabled] .input-group-btn .btn-default.hover,
+.input-group-btn .btn-default.disabled:focus,
+.input-group-btn .btn-default[disabled]:focus,
+fieldset[disabled] .input-group-btn .btn-default:focus,
+.input-group-btn .btn-default.disabled:active,
+.input-group-btn .btn-default[disabled]:active,
+fieldset[disabled] .input-group-btn .btn-default:active,
+.input-group-btn .btn-default.disabled.active,
+.input-group-btn .btn-default[disabled].active,
+fieldset[disabled] .input-group-btn .btn-default.active {
+  background-color: #bdc3c7;
+  border-color: #bdc3c7;
+}
+.input-group-btn .btn-default .badge {
+  color: #bdc3c7;
+  background-color: #ffffff;
+}
+.input-group-hg .input-group-btn .btn {
+  line-height: 31px;
+}
+.input-group-lg .input-group-btn .btn {
+  line-height: 21px;
+}
+.input-group-sm .input-group-btn .btn {
+  line-height: 19px;
+}
+.input-group-btn:first-child > .btn {
+  border-right-width: 0;
+  margin-right: -3px;
+}
+.input-group-btn:last-child > .btn {
+  border-left-width: 0;
+  margin-left: -3px;
+}
+.input-group-btn > .btn-default + .btn-default {
+  border-left: 2px solid #bdc3c7;
+}
+.input-group-btn > .btn:first-child + .btn .caret {
+  margin-left: 0;
+}
+.input-group-rounded .input-group-btn + .form-control,
+.input-group-rounded .input-group-btn:last-child .btn,
+.input-group-rounded .input-group-btn + .select2-search input[type="text"] {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.input-group-hg.input-group-rounded .input-group-btn + .form-control,
+.input-group-hg.input-group-rounded .input-group-btn:last-child .btn,
+.input-group-hg.input-group-rounded .input-group-btn + .select2-search input[type="text"] {
+  border-bottom-right-radius: 27px;
+  border-top-right-radius: 27px;
+}
+.input-group-lg.input-group-rounded .input-group-btn + .form-control,
+.input-group-lg.input-group-rounded .input-group-btn:last-child .btn,
+.input-group-lg.input-group-rounded .input-group-btn + .select2-search input[type="text"] {
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.input-group-rounded .form-control:first-child,
+.input-group-rounded .input-group-btn:first-child .btn,
+.input-group-rounded .select2-search input[type="text"]:first-child {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.input-group-hg.input-group-rounded .form-control:first-child,
+.input-group-hg.input-group-rounded .input-group-btn:first-child .btn,
+.input-group-hg.input-group-rounded .select2-search input[type="text"]:first-child {
+  border-bottom-left-radius: 27px;
+  border-top-left-radius: 27px;
+}
+.input-group-lg.input-group-rounded .form-control:first-child,
+.input-group-lg.input-group-rounded .input-group-btn:first-child .btn,
+.input-group-lg.input-group-rounded .select2-search input[type="text"]:first-child {
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+.input-group-rounded .input-group-btn + .form-control,
+.input-group-rounded .input-group-btn + .select2-search input[type="text"] {
+  padding-left: 0;
+}

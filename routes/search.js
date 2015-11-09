@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 router.post('/', function(req, res, next) {
   //res.render('index', { title: 'Bit Coach' });
   var Site = require("../models/site").Site
+  console.log("Search Type: " + req.body.search_type);
   var search_term = req.body.search_input;
     //Site.find({ search_term: { $in : this.languages } } ).exec(function(err, results) {
     var query ={};

@@ -14,7 +14,7 @@ html
     link(href='/css/custom.css', rel='stylesheet')  
     link(href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', rel='stylesheet')
     // Custom styles for this template
-    link(href='/css/style.css', rel='stylesheet')
+    //link(href='/css/style.css', rel='stylesheet')
     // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     //if lt IE 9
     //script(src='/bower_components/bootstrap/dist/javascripts/html5shiv.js')
@@ -22,6 +22,11 @@ html
     script(src='http://code.jquery.com/jquery.js')
     script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
     script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/bower_components/less/dist/less.js')
+    script(src='/bower_components/less/dist/less.min.js')
+    link(rel='stylesheet/less', type='text/css', href='/css/flat_ui/flat-ui.less')
+    link(href='/css/navbar.css', rel='stylesheet')  
+
 
     block extraHeader
   body
@@ -70,11 +75,19 @@ html
                   a(href='#') One more separated link
             li(class=category=='DB'?'active':undefined)
               a(href='/db') DB
+          //form.navbar-form.navbar-right(role='search', action="/search", method="post")
+          //  .form-group
+          //    input.form-control(type='text', placeholder='Search', name="search_input")            
+          //    button.btn.btn-default(type='submit',style="margin-left: -5px") 
+          //      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
           form.navbar-form.navbar-right(role='search', action="/search", method="post")
-            .form-group
-              input.form-control(type='text', placeholder='Search', name="search_input")            
-              button.btn.btn-default(type='submit',style="margin-left: -5px") 
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            .input-group
+              .input-group-btn.search-panel
+              input#search_key.form-control(type='text', name='search_input', placeholder='Search..', value='')
+              | &#x9;
+              span.input-group-btn
+                button.btn.btn-info(type='submit') &nbsp;&nbsp;Search&nbsp;&nbsp;
+
 
                   
     
@@ -86,7 +99,7 @@ html
             h1.page-header
               =title
     
-    block content
+        block content
     
     //
        Bootstrap core JavaScript
