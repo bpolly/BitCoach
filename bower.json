@@ -27,6 +27,7 @@
   "dependencies": {
     "bourbon": "~4.2.6",
     "bootstrap": "~3.3.5",
-    "less": "~2.5.3"
+    "less": "~2.5.3",
+    "typeahead.js": "~0.11.1"
   }
 }

@@ -19,14 +19,23 @@ html
     //if lt IE 9
     //script(src='/bower_components/bootstrap/dist/javascripts/html5shiv.js')
     //script(src='/bower_components/bootstrap/dist/javascripts/respond.min.js')
-    script(src='http://code.jquery.com/jquery.js')
-    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
-    script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
-    script(src='/bower_components/less/dist/less.js')
-    script(src='/bower_components/less/dist/less.min.js')
-    link(rel='stylesheet/less', type='text/css', href='/css/flat_ui/flat-ui.less')
+    //script(src='http://code.jquery.com/jquery.js')
+    //script(src="/javascripts/jquery.js")
+    //script(src="/javascripts/bootstrap.min.js")
+    //script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    //script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(type="text/javascript" src="/javascripts/jquery.js" )
+    script(type="text/javascript" src="/javascripts/bootstrap.min.js" )
+    script(type="text/javascript" src='/bower_components/typeahead.js/dist/typeahead.jquery.js' defer)
+    script(type="text/javascript" src='/bower_components/typeahead.js/dist/typeahead.bundle.js' defer)
+    //script(src='/bower_components/typeahead.js/dist/bloodhound.js')
+    script(type="text/javascript" src='/javascripts/navbar.js' defer)
     link(href='/css/navbar.css', rel='stylesheet')  
+    
+    
+    
 
+    //script(src='/bower_components/typeahead.js/dist/typeahead.bundle.js')
 
     block extraHeader
   body
@@ -83,7 +92,8 @@ html
           form.navbar-form.navbar-right(role='search', action="/search", method="post")
             .input-group
               .input-group-btn.search-panel
-              input#search_key.form-control(type='text', name='search_input', placeholder='Search..', value='')
+                #navsearch
+                  input.form-control.typeahead(type='text', name='search_input', placeholder='Search..', data-provide="typeahead", autocomplete="off")
               | &#x9;
               span.input-group-btn
                 button.btn.btn-info(type='submit') &nbsp;&nbsp;Search&nbsp;&nbsp;
@@ -104,5 +114,11 @@ html
     //
        Bootstrap core JavaScript
     // Placed at the end of the document so the pages load faster
-    script(src="/javascripts/jquery.js")
-    script(src="/javascripts/bootstrap.min.js")
+    //script(src='/javascripts/bootstrap3-typeahead.js')
+//    script(src="/javascripts/jquery.js")
+//    script(src="/javascripts/bootstrap.min.js")
+//    script(src='/bower_components/typeahead.js/dist/typeahead.jquery.js')
+//    script(src='/bower_components/typeahead.js/dist/typeahead.bundle.js')
+//    //script(src='/bower_components/typeahead.js/dist/bloodhound.js')
+//    script(src='/javascripts/navbar.js')
+//    link(href='/css/navbar.css', rel='stylesheet')  
