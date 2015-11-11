@@ -21,15 +21,9 @@ var substringMatcher = function(strs) {
   };
 };
 
-var states = ['NodeJS', 'ExpressJS', 'HTML/CSS', 'Java', 'California',
-  'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
-  'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
-  'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
-  'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
-  'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
-  'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
-  'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-  'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+var states = ['NodeJS', 'ExpressJS', 'HTML/CSS', 'Java', 'Ruby',
+  'Rails', 'C#', 'C++', 'JavaScript', 'AngularJS', 'Python',
+  'C'
 ];
 
 $('.typeahead').typeahead({
@@ -40,4 +34,38 @@ $('.typeahead').typeahead({
 {
   name: 'states',
   source: substringMatcher(states)
+});
+
+
+
+$(document).ready(function() {
+  var myjson = [{"id":"Ruby","text":"Ruby"},{"id":"JavaScript","text":"JavaScript"},
+  {"id":"Regex","text":"Regex"},{"id":"Java","text":"Java"},{"id":"Python","text":"Python"},
+  {"id":"Groovy","text":"Groovy"},{"id":"Grails","text":"Grails"},{"id":"Rails","text":"Rails"},
+  {"id":"jQuery","text":"jQuery"},{"id":"AngularJS","text":"AngularJS"},{"id":"HTML","text":"HTML"},
+  {"id":"Android","text":"Android"},{"id":"iOS","text":"iOS"},{"id":"SQL","text":"SQL"},
+  {"id":"Hadoop","text":"Hadoop"},{"id":"CSS","text":"CSS"},{"id":"C#","text":"C#"},
+  {"id":"C++","text":"C++"},{"id":"J2EE","text":"J2EE"},{"id":"BackboneJS","text":"BackboneJS"},
+  {"id":"PhoneGap","text":"PhoneGap"},{"id":"PHP","text":"PHP"},{"id":"CLI","text":"CLI"},
+  {"id":"Git","text":"Git"},{"id":"Games","text":"Games"},{"id":"HTML/CSS","text":"HTML/CSS"},
+  {"id":"Database","text":"Database"},{"id":"Swift","text":"Swift"},{"id":"R","text":"R"},
+  {"id":"Linux","text":"Linux"},{"id":"Shell","text":"Shell"},{"id":"Bash","text":"Bash"},
+  {"id":"Jekyl","text":"Jekyl"},{"id":"Design","text":"Design"},{"id":"Business","text":"Business"},
+  {"id":"Dev Tools","text":"Dev Tools"}];
+  /*$.getJSON("/sites/language_list.json", function(json){
+           myjson = json;
+      });
+    console.log("myjson: " + myjson);
+*/
+  $(".navselect").select2({
+    data: myjson
+  });
+
+
+
+
+  $(".navselect").change(function(){
+    $("#search_input").val($(this).val());
+  });
+
 });

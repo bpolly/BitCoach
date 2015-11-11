@@ -76,7 +76,7 @@ router.post('/', function(req, res, next) {
 
 // Test route I use to specifically remove elements
 router.get('/remove', function(req, res, next){
-  Site.find({name:'Udacity111'}).remove(function (err) {
+  Site.find({name:'Team Treehouse'}).remove(function (err) {
     if (err) return handleError(err);
       console.log("ENTRIES REMOVED");
   });

@@ -118,5 +118,33 @@ router.get('/show', function(req, res, next){
   res.render('sites/show');
 });
 
+router.get('/language_list.json', function(req, res, next){
+  var Site = require("../models/site").Site;
+  var language_list = [];
+  Site.find({}).exec(function(err, sites) {
+    //console.log(JSON.stringify(sites));
+    sites.forEach(function (site, i){
+      site["languages"].forEach(function (language, i){
+        flag = false;
+        for(var i = 0; i < language_list.length; i++){
+          if(language_list[i] == language)
+          {
+             flag = true;
+          }
+       }
+        if(!(flag)){
+          language_list.push(language);
+        }
+        flag = false;
+      });
+    });
+    var formatted_list = [];
+    for(var j = 0; j < language_list.length; j++){
+      var lang = {id: language_list[j], text: language_list[j]}
+      formatted_list.push(lang);
+    }
+      res.send(formatted_list);
+  });
+});
 
 module.exports = router;

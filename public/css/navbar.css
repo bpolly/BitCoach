@@ -1,3 +1,7 @@
+#navsearch input {
+  width: 225px;
+}
+
 .navbar a{
   font-family: lato !important;
 }
@@ -13,14 +17,14 @@
           border-radius: 5;
 }
 
-.nvbar-form input #search_key.form-control, .input-group .form-control:not(:first-child):not(:last-child)
+.navbar-form input #search_key.form-control, .input-group .form-control:not(:first-child):not(:last-child)
 {
   border-radius: 5px !important;
 }
 
 .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
     z-index: 2;
-    margin-left: -10px;
+    margin-left: -5px;
 }
 
 
@@ -30,11 +34,11 @@
 }
 
 .typeahead:focus {
-  border: 2px solid #0097cf;
+  border: 2px solid #5BC0DE;
 }
 
 .tt-query {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
@@ -44,15 +48,15 @@
 }
 
 .tt-menu {
-  width: 422px;
-  margin: 12px 0;
-  padding: 8px 0;
+  width: 221px;
+  margin: 0px 0;
+  /*padding: 2px 0;*/
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 8px;
+  /*-webkit-border-radius: 8px;
      -moz-border-radius: 8px;
-          border-radius: 8px;
+          border-radius: 8px;*/
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
      -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
           box-shadow: 0 5px 10px rgba(0,0,0,.2);
@@ -60,8 +64,9 @@
 
 .tt-suggestion {
   padding: 3px 20px;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 54px;
+  border-bottom: 1px solid #dedede;
 }
 
 .tt-suggestion:hover {
@@ -78,4 +83,12 @@
 
 .tt-suggestion p {
   margin: 0;
+}
+
+.navselect {
+  width: 200px;
+}
+
+#navsearch_btn {
+ 
 }

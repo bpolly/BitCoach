@@ -26,11 +26,14 @@ html
     //script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
     script(type="text/javascript" src="/javascripts/jquery.js" )
     script(type="text/javascript" src="/javascripts/bootstrap.min.js" )
+
     script(type="text/javascript" src='/bower_components/typeahead.js/dist/typeahead.jquery.js' defer)
     script(type="text/javascript" src='/bower_components/typeahead.js/dist/typeahead.bundle.js' defer)
     //script(src='/bower_components/typeahead.js/dist/bloodhound.js')
     script(type="text/javascript" src='/javascripts/navbar.js' defer)
     link(href='/css/navbar.css', rel='stylesheet')  
+    script(type="text/javascript" src="https://cdn.jsdelivr.net/select2/4.0.1-rc.1/js/select2.js" defer)
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/select2/4.0.1-rc.1/css/select2.css" defer)
     
     
     
@@ -84,19 +87,23 @@ html
                   a(href='#') One more separated link
             li(class=category=='DB'?'active':undefined)
               a(href='/db') DB
-          //form.navbar-form.navbar-right(role='search', action="/search", method="post")
-          //  .form-group
-          //    input.form-control(type='text', placeholder='Search', name="search_input")            
-          //    button.btn.btn-default(type='submit',style="margin-left: -5px") 
-          //      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+
+
           form.navbar-form.navbar-right(role='search', action="/search", method="post")
-            .input-group
-              .input-group-btn.search-panel
-                #navsearch
-                  input.form-control.typeahead(type='text', name='search_input', placeholder='Search..', data-provide="typeahead", autocomplete="off")
-              | &#x9;
-              span.input-group-btn
-                button.btn.btn-info(type='submit') &nbsp;&nbsp;Search&nbsp;&nbsp;
+            .form-group
+              select.navselect.nav.navbar-nav.navbar-right
+                option
+                optgroup(label="Languages")
+                  option(value="nodejs") NodeJS
+                  option(value="C#") C#
+                optgroup(label="Sites")
+                  option(value="treehouse") Team Treehouse
+              input(type="hidden" id="search_input" name='search_input' value="")
+              button.btn.btn-info.btn-sm(id="navsearch_btn" type='submit') Select
+
+
+
+
 
 
                   
@@ -108,17 +115,4 @@ html
           .col-lg-12
             h1.page-header
               =title
-    
-        block content
-    
-    //
-       Bootstrap core JavaScript
-    // Placed at the end of the document so the pages load faster
-    //script(src='/javascripts/bootstrap3-typeahead.js')
-//    script(src="/javascripts/jquery.js")
-//    script(src="/javascripts/bootstrap.min.js")
-//    script(src='/bower_components/typeahead.js/dist/typeahead.jquery.js')
-//    script(src='/bower_components/typeahead.js/dist/typeahead.bundle.js')
-//    //script(src='/bower_components/typeahead.js/dist/bloodhound.js')
-//    script(src='/javascripts/navbar.js')
-//    link(href='/css/navbar.css', rel='stylesheet')  
+    block content
