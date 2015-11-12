@@ -39,26 +39,42 @@ $('.typeahead').typeahead({
 
 
 $(document).ready(function() {
-  var myjson = [{"id":"Ruby","text":"Ruby"},{"id":"JavaScript","text":"JavaScript"},
-  {"id":"Regex","text":"Regex"},{"id":"Java","text":"Java"},{"id":"Python","text":"Python"},
-  {"id":"Groovy","text":"Groovy"},{"id":"Grails","text":"Grails"},{"id":"Rails","text":"Rails"},
-  {"id":"jQuery","text":"jQuery"},{"id":"AngularJS","text":"AngularJS"},{"id":"HTML","text":"HTML"},
-  {"id":"Android","text":"Android"},{"id":"iOS","text":"iOS"},{"id":"SQL","text":"SQL"},
-  {"id":"Hadoop","text":"Hadoop"},{"id":"CSS","text":"CSS"},{"id":"C#","text":"C#"},
-  {"id":"C++","text":"C++"},{"id":"J2EE","text":"J2EE"},{"id":"BackboneJS","text":"BackboneJS"},
-  {"id":"PhoneGap","text":"PhoneGap"},{"id":"PHP","text":"PHP"},{"id":"CLI","text":"CLI"},
-  {"id":"Git","text":"Git"},{"id":"Games","text":"Games"},{"id":"HTML/CSS","text":"HTML/CSS"},
-  {"id":"Database","text":"Database"},{"id":"Swift","text":"Swift"},{"id":"R","text":"R"},
-  {"id":"Linux","text":"Linux"},{"id":"Shell","text":"Shell"},{"id":"Bash","text":"Bash"},
-  {"id":"Jekyl","text":"Jekyl"},{"id":"Design","text":"Design"},{"id":"Business","text":"Business"},
-  {"id":"Dev Tools","text":"Dev Tools"}];
+  var myjson = [
+    {
+      text: "Languages",
+      children:
+            [{"id":"Ruby","text":"Ruby"},{"id":"JavaScript","text":"JavaScript"},
+            {"id":"Regex","text":"Regex"},{"id":"Java","text":"Java"},{"id":"Python","text":"Python"},
+            {"id":"Groovy","text":"Groovy"},{"id":"Grails","text":"Grails"},{"id":"Rails","text":"Rails"},
+            {"id":"jQuery","text":"jQuery"},{"id":"AngularJS","text":"AngularJS"},{"id":"HTML","text":"HTML"},
+            {"id":"Android","text":"Android"},{"id":"iOS","text":"iOS"},{"id":"SQL","text":"SQL"},
+            {"id":"Hadoop","text":"Hadoop"},{"id":"CSS","text":"CSS"},{"id":"C#","text":"C#"},
+            {"id":"C++","text":"C++"},{"id":"J2EE","text":"J2EE"},{"id":"BackboneJS","text":"BackboneJS"},
+            {"id":"PhoneGap","text":"PhoneGap"},{"id":"PHP","text":"PHP"},{"id":"CLI","text":"CLI"},
+            {"id":"Git","text":"Git"},{"id":"Games","text":"Games"},{"id":"HTML/CSS","text":"HTML/CSS"},
+            {"id":"Database","text":"Database"},{"id":"Swift","text":"Swift"},{"id":"R","text":"R"},
+            {"id":"Linux","text":"Linux"},{"id":"Shell","text":"Shell"},{"id":"Bash","text":"Bash"},
+            {"id":"Jekyl","text":"Jekyl"},{"id":"Design","text":"Design"},{"id":"Business","text":"Business"},
+            {"id":"Dev Tools","text":"Dev Tools"},{"id":"NodeJS","text":"NodeJS"}]
+    },
+    {
+      text: "Sites",
+      children: [{"id":"Ruby Monk","text":"Ruby Monk"},{"id":"JavaScript.com","text":"JavaScript.com"},
+      {"id":"TryRegex","text":"TryRegex"},{"id":"Coding Bat","text":"Coding Bat"},
+      {"id":"JPassion","text":"JPassion"},{"id":"Programmr","text":"Programmr"},
+      {"id":"Code Pupil","text":"Code Pupil"},{"id":"Codecademy","text":"Codecademy"},
+      {"id":"Code Avengers","text":"Code Avengers"},{"id":"Try Ruby","text":"Try Ruby"},
+      {"id":"Crunchy","text":"Crunchy"},{"id":"edX","text":"edX"},{"id":"Code School","text":"Code School"},
+      {"id":"Udacity","text":"Udacity"},{"id":"Team Treehouse","text":"Team Treehouse"}]
+    }];
   /*$.getJSON("/sites/language_list.json", function(json){
            myjson = json;
       });
     console.log("myjson: " + myjson);
 */
   $(".navselect").select2({
-    data: myjson
+    data: myjson,
+    placeholder: "Select Language/Site"
   });
 
 

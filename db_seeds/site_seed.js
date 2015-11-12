@@ -78,6 +78,8 @@ newSite = new Site({
     "Design",
     "Business",
     "Dev Tools",
+    "NodeJS",
+    "AngularJS",
     "iOS"],
   paid: true,
   plans: [{plan_type: "Student", price: 9},{plan_type:"Basic", price: 25},{plan_type:"Pro", price: 50}],
