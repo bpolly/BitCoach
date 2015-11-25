@@ -154,7 +154,7 @@ router.get('/site_list.json', function(req, res, next){
   Site.find({}).exec(function(err, sites) {
     //console.log(JSON.stringify(sites));
     sites.forEach(function (site, i){
-      site_list.push(site.name);
+      site_list.push(site.namew);
     });
     var formatted_list = [];
     for(var j = 0; j < site_list.length; j++){

@@ -3,6 +3,7 @@ var router = express.Router();
 var app = express();
 var bodyParser = require('body-parser');
 var Site = require("../models/site").Site;
+var Language = require("../models/language").Language;
 var mongoose = require('mongoose');
 var util = require('util');
 var category = "DB";
@@ -85,8 +86,24 @@ router.get('/remove', function(req, res, next){
 
 // Test route to seed DB
 router.get('/seed/confirm', function(req, res, next){
-  require('../db_seeds/site_seed.js');
+  require('../db_seeds/test_seed.js');
   res.send("DB Seeded");
 });
+
+router.get('/seed/test', function(req, res, next){
+  Site.findOne({})
+  .populate('languages')
+  .exec(function (err, site) {
+  if (err) return handleError(err);
+  //console.log(site.languages)
+  for(var i = 0; i < site.languages.length; i++){
+    console.log(site.languages[i]);
+  }
+  //console.log('The languages are %s', site.languages);
+  // prints "The creator is Aaron"
+});
+  res.send("DB Seeded");
+});
+
 
 module.exports = router;
