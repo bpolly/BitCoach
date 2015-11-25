@@ -28,6 +28,7 @@ var expressjs_lang = new Language({ _id: 20, url: "http://expressjs.com/", name:
 var swift_lang = new Language({ _id: 21, url: "https://developer.apple.com/swift/", name: 'Swift', category: 5 });
 
 var code_pupil_site = new Site({
+  _id: 1,
   url: "codepupil.com",
   name: "Code Pupil",
   languages: [css_lang._id, html_lang._id],
@@ -45,6 +46,7 @@ var code_pupil_site = new Site({
 
 
 var codecademy_site = new Site({
+  _id: 2,
   url: "codecademy.com",
   name: "Codecademy",
   languages: [html_lang._id,css_lang._id,javascript_lang._id,jquery_lang._id,php_lang._id,python_lang._id,ruby_lang._id,rails_lang._id,angularjs_lang._id,sql_lang._id,java_lang._id,git_lang._id],
@@ -60,6 +62,7 @@ var codecademy_site = new Site({
 });
 
 var code_avengers_site = new Site({
+  _id: 3,
   url: "codeavengers.com",
   name: "Code Avengers",
   languages: [html_lang._id,css_lang._id,android_lang._id,javascript_lang._id],
@@ -76,6 +79,7 @@ var code_avengers_site = new Site({
 
 
 var team_treehouse_site = new Site({
+  _id: 4,
   url: "teamtreehouse.com",
   name: "Team Treehouse",
   languages: [html_lang._id,
@@ -124,7 +128,8 @@ var team_treehouse_site = new Site({
 
 
 var ruby_monk_site = new Site({
-  url: "rubymonk.com",
+  _id: 5,
+    url: "rubymonk.com",
   name: "Ruby Monk",
   languages: [ruby_lang._id],
   //*languages: ["Ruby"],
@@ -140,6 +145,7 @@ var ruby_monk_site = new Site({
 
 
 var try_ruby_site = new Site({
+  _id: 6,
   url: "tryruby.org",
   name: "Try Ruby",
   languages: [ruby_lang._id],
@@ -155,6 +161,7 @@ var try_ruby_site = new Site({
 });
 
 var crunchy_site = new Site({
+  _id: 7,
   url: "https://code.google.com/p/crunchy/",
   name: "Crunchy",
   languages: [python_lang._id],
@@ -170,6 +177,7 @@ var crunchy_site = new Site({
 });
 
 var javascript_site = new Site({
+  _id: 8,
   url: "https://www.javascript.com/try",
   name: "JavaScript.com",
   languages: [javascript_lang._id],
@@ -186,6 +194,7 @@ var javascript_site = new Site({
 
 
 var tryregex_site = new Site({
+  _id: 9,
   url: "http://tryregex.com/",
   name: "TryRegex",
   languages: [],
@@ -201,6 +210,7 @@ var tryregex_site = new Site({
 });
 
 var codingbat_site = new Site({
+  _id: 10,
   url: "http://codingbat.com/",
   name: "Coding Bat",
   languages: [java_lang._id, python_lang._id],
@@ -217,6 +227,7 @@ var codingbat_site = new Site({
 
 
 var jpassion_site = new Site({
+  _id: 11,
   url: "http://www.jpassion.com/portal/",
   name: "JPassion",
   languages: [java_lang._id, ruby_lang._id, rails_lang._id, javascript_lang._id, jquery_lang._id, angularjs_lang._id, html_lang._id, android_lang._id, ios_lang._id, sql_lang._id, hadoop_lang._id],
@@ -233,6 +244,7 @@ var jpassion_site = new Site({
 
 
 var programmr_site = new Site({
+  _id: 12,
   url: "http://www.programmr.com/",
   name: "Programmr",
   languages:[java_lang._id,
@@ -275,6 +287,7 @@ var programmr_site = new Site({
 });
 
 var edx_site = new Site({
+  _id: 13,
   url: "https://www.edx.org/",
   name: "edX",
   languages: [java_lang._id,ruby_lang._id,javascript_lang._id,jquery_lang._id,angularjs_lang._id,html_lang._id,css_lang._id,android_lang._id,ios_lang._id,sql_lang._id,csharp_lang._id,cplusplus_lang._id],
@@ -291,7 +304,8 @@ var edx_site = new Site({
 
 
 var codeschool_site = new Site({
-  url: "codeschool.com",
+  _id: 14,
+  url: "codeschool.com",
   name: "Code School",
   languages: [ruby_lang._id, javascript_lang._id, html_lang._id, css_lang._id, ios_lang._id, git_lang._id, sql_lang._id],
 //*languages: ["Ruby","JavaScript","HTML/CSS","iOS","Git","Database"],
@@ -306,7 +320,8 @@ var codeschool_site = new Site({
 });
 
 var udacity_site = new Site({
-  url: "udacity.com",
+  _id: 15,
+  url: "udacity.com",
   name: "Udacity",
   languages: [ios_lang._id, java_lang._id, css_lang._id, html_lang._id, hadoop_lang._id, python_lang._id, sql_lang._id, java_lang._id, bash_lang._id],
 //*languages: ["Swift","JavaScript","CSS","HTML","Hadoop","R","Python","SQL","Java","Linux","Shell","Bash"],
@@ -362,20 +377,3 @@ async.series([
   }
 
 ]);
-
-/*
-css_lang.save(function (err) {
-  html_lang.save(function (err) {
-    //code_pupil_site.languages = [css_lang._id, html_lang._id];
-    code_pupil_site.save(function (err) {
-      if (err) {console.log ('Error on code pupil save!' + err)}
-      else {
-        console.log("Hi");
-        console.log(code_pupil_site.languages.length);
-        console.log("ID: " + css_lang._id);
-        console.log(code_pupil_site.languages.length);
-      }
-    });
-    });
-  });
-*/

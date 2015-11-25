@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var siteSchema = new mongoose.Schema({
+    _id: Number,
     url: {
         type: String,
         unique: true,

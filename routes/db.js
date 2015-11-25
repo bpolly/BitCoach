@@ -91,7 +91,7 @@ router.get('/seed/confirm', function(req, res, next){
 });
 
 router.get('/seed/test', function(req, res, next){
-  Site.findOne({})
+  Site.findOne({name:'Team Treehouse'})
   .populate('languages')
   .exec(function (err, site) {
   if (err) return handleError(err);
@@ -101,8 +101,9 @@ router.get('/seed/test', function(req, res, next){
   }
   //console.log('The languages are %s', site.languages);
   // prints "The creator is Aaron"
+    res.send(JSON.stringify(site.languages));
 });
-  res.send("DB Seeded");
+
 });
 
 
