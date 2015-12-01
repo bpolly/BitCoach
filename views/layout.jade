@@ -64,6 +64,8 @@ html
               a(href='/technologies') Technologies & Frameworks
             li(class=title=='Rankings'?'active':undefined)
               a(href='/rankings') Rankings
+            li(class=category=='Languages'?'active':undefined)
+              a(href='/languages') Languages
             li.dropdown(class=category=='Sites'?'active':undefined)
               a.dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
                 | Sites 
@@ -113,4 +115,5 @@ html
           .col-lg-12
             h1.page-header
               =title
-    block content
+    .container
+      block content

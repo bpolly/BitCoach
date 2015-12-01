@@ -1,0 +1,30 @@
+extends ../layout
+
+block extraHeader
+  link(href='/css/site_table.css', rel='stylesheet')  
+
+block content
+  table#language_table.table.table-striped.table-responsive
+    //th Name
+    th ID
+    th Name
+    //th(style="width: 10px;") Languages
+    th URL
+    th Category
+    //th ID
+    th Edit
+    th Delete
+    for language in languages
+      tr
+        td= language.id
+        td= language.name
+        td 
+          a(href="http://#{language.url}")= language.url
+         //td= language.languages
+        td= language.category
+        td
+          a.btn.btn-primary(href="/languages/edit/#{language._id}") Edit
+        td
+          form(method='POST', action='/languages/delete/#{language._id}')
+            button.btn.btn-danger.btn-delete-item(type='submit') Delete
+  a(href="/sites/new") New
