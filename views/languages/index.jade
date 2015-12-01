@@ -6,6 +6,7 @@ block extraHeader
 block content
   table#language_table.table.table-striped.table-responsive
     //th Name
+    th View
     th ID
     th Name
     //th(style="width: 10px;") Languages
@@ -16,8 +17,11 @@ block content
     th Delete
     for language in languages
       tr
+        td 
+          a.btn.btn-primary(href="/languages/#{language._id}") View
         td= language.id
-        td= language.name
+        td
+          b= language.name
         td 
           a(href="http://#{language.url}")= language.url
          //td= language.languages

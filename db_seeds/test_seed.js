@@ -4,28 +4,182 @@ var mongoose = require('mongoose');
 var async = require('async');
 
 
-var nodejs_lang = new Language({ _id: 0, url: "https://nodejs.org", name: 'NodeJS', category: 1 });
-var angularjs_lang = new Language({ _id: 1, url: "https://angularjs.org", name: 'AngularJS', category: 1 });
-var html_lang = new Language({ _id: 2, url: "http://www.w3.org/html/", name: 'HTML', category: 1 });
-var css_lang = new Language({ _id: 3, url: "http://www.w3.org/Style/CSS/Overview.en.html", name: 'CSS', category: 1 });
-var javascript_lang = new Language({ _id: 4, url: "https://www.javascript.com/", name: 'JavaScript', category: 1 });
-var jquery_lang = new Language({ _id: 5, url: "https://jquery.com/", name: 'jQuery', category: 1 });
-var php_lang = new Language({ _id: 6, url: "https://php.net", name: 'PHP', category: 1 });
-var python_lang = new Language({ _id: 7, url: "https://python.org", name: 'Python', category: 2 });
-var ruby_lang = new Language({ _id: 8, url: "https://ruby-lang.org", name: 'Ruby', category: 2 });
-var rails_lang = new Language({ _id: 9, url: "https://rubyonrails.org", name: 'Rails', category: 3 });
-var sql_lang = new Language({ _id: 10, url: "https://en.wikipedia.org/wiki/SQL", name: 'SQL', category: 4 });
-var git_lang = new Language({ _id: 11, url: "https://git-scm.com/", name: 'Git', category: 7 });
-var ios_lang = new Language({ _id: 12, url: "https://developer.apple.com/ios", name: 'iOS', category: 5 });
-var android_lang = new Language({ _id: 13, url: "https://developer.android.com", name: 'Android', category: 5 });
-var winphone_lang = new Language({ _id: 14, url: "https://dev.windows.com/en-us/develop", name: 'Windows Phone', category: 5 });
-var java_lang = new Language({ _id: 15, url: "https://java.com/", name: 'Java', category: 6 });
-var csharp_lang = new Language({ _id: 16, url: "https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx", name: 'C#', category: 6 });
-var cplusplus_lang = new Language({ _id: 17, url: "http://www.cplusplus.com/", name: 'C++', category: 6 });
-var hadoop_lang = new Language({ _id: 18, url: "https://hadoop.apache.org/", name: 'Hadoop', category: 4 });
-var bash_lang = new Language({ _id: 19, url: "https://www.gnu.org/software/bash/", name: 'Bash', category: 7 });
-var expressjs_lang = new Language({ _id: 20, url: "http://expressjs.com/", name: 'ExpressJS', category: 3 });
-var swift_lang = new Language({ _id: 21, url: "https://developer.apple.com/swift/", name: 'Swift', category: 5 });
+var nodejs_lang = new Language({
+  _id: 0, url: "https://nodejs.org",
+  name: 'NodeJS',
+  category: 1,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var angularjs_lang = new Language({ _id: 1,
+  url: "https://angularjs.org",
+  name: 'AngularJS',
+  category: 1,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: ""});
+var html_lang = new Language({ _id: 2,
+  url: "http://www.w3.org/html/",
+  name: 'HTML',
+  category: 1,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var css_lang = new Language({ _id: 3,
+  url: "http://www.w3.org/Style/CSS/Overview.en.html",
+  name: 'CSS',
+  category: 1,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var javascript_lang = new Language({ _id: 4,
+  url: "https://www.javascript.com/",
+  name: 'JavaScript',
+  category: 1,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var jquery_lang = new Language({ _id: 5,
+  url: "https://jquery.com/",
+  name: 'jQuery',
+  category: 1,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var php_lang = new Language({ _id: 6,
+  url: "https://php.net",
+  name: 'PHP',
+  category: 1,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var python_lang = new Language({ _id: 7,
+  url: "https://python.org",
+  name: 'Python',
+  category: 2,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var ruby_lang = new Language({ _id: 8,
+  url: "https://ruby-lang.org",
+  name: 'Ruby',
+  category: 2,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var rails_lang = new Language({ _id: 9,
+  url: "https://rubyonrails.org",
+  name: 'Rails',
+  category: 3,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var sql_lang = new Language({ _id: 10,
+  url: "https://en.wikipedia.org/wiki/SQL",
+  name: 'SQL',
+  category: 4,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var git_lang = new Language({ _id: 11,
+  url: "https://git-scm.com/",
+  name: 'Git',
+  category: 7,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var ios_lang = new Language({ _id: 12,
+  url: "https://developer.apple.com/ios",
+  name: 'iOS',
+  category: 5,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var android_lang = new Language({ _id: 13,
+  url: "https://developer.android.com",
+  name: 'Android',
+  category: 5,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var winphone_lang = new Language({ _id: 14,
+  url: "https://dev.windows.com/en-us/develop",
+  name: 'Windows Phone',
+  category: 5,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var java_lang = new Language({ _id: 15,
+  url: "https://java.com/",
+  name: 'Java',
+  category: 6,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var csharp_lang = new Language({ _id: 16,
+  url: "https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx",
+  name: 'C#',
+  category: 6,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var cplusplus_lang = new Language({ _id: 17,
+  url: "http://www.cplusplus.com/",
+  name: 'C++',
+  category: 6,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var hadoop_lang = new Language({ _id: 18,
+  url: "https://hadoop.apache.org/",
+  name: 'Hadoop',
+  category: 4,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var bash_lang = new Language({ _id: 19,
+  url: "https://www.gnu.org/software/bash/",
+  name: 'Bash',
+  category: 7,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var expressjs_lang = new Language({ _id: 20,
+  url: "http://expressjs.com/",
+  name: 'ExpressJS',
+  category: 3,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
+var swift_lang = new Language({ _id: 21,
+  url: "https://developer.apple.com/swift/",
+  name: 'Swift',
+  category: 5,
+  long_description: "",
+  short_description: "",
+  thumbnail_path: "",
+  large_banner_path: "" });
 
 var code_pupil_site = new Site({
   _id: 1,
