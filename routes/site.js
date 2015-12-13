@@ -34,7 +34,7 @@ router.get('/table', function(req, res, next) {
   // Tank.find({ size: 'small' }).where('createdDate').gt(oneYearAgo).exec(callback);
   var Site = require("../models/site").Site
   Site.find({}).sort({ 'rating' : 'descending'}).exec(function(err, results) {
-        console.log(JSON.stringify(results));
+        //console.log(JSON.stringify(results));
         res.render('sites/table', { title: 'Sites Table', category: category, site_list: results });
       });
 
@@ -86,7 +86,7 @@ router.post('/edit/:site_id', function(req, res, next){
     {
       url: req.body.url,
       name: req.body.name,
-      languages: req.body.languages,
+      //languages: req.body.languages,
       paid: req.body.paid,
       virtual: req.body.virtual,
       price_per_month: req.body.price_per_month,
@@ -96,8 +96,11 @@ router.post('/edit/:site_id', function(req, res, next){
       thumbnail_path: req.body.thumbnail_path,
       large_banner_path: req.body.large_banner_path
     }, function (err, result) {
-      //if (err) return handleError(err);
-      console.log('Update result: ', JSON.stringify(result));
+      if (err) console.log(err);
+      else {
+      console.log('Site ID: ', req.params.site_id);
+      console.log('Site Name:', result.name);
+      console.log('Update result: ', JSON.stringify(result));}
       res.redirect('/sites/table');
   });
 });
@@ -154,7 +157,7 @@ router.get('/site_list.json', function(req, res, next){
   Site.find({}).exec(function(err, sites) {
     //console.log(JSON.stringify(sites));
     sites.forEach(function (site, i){
-      site_list.push(site.name);
+      site_list.push(site.namew);
     });
     var formatted_list = [];
     for(var j = 0; j < site_list.length; j++){

@@ -1,9 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700,900,300");
 
-*, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-    font-family: 'Open Sans',serif;
-    font-weight: 300;
-}
 
 .breadcrumb {
     border-left-color: #3E84C2;

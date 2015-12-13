@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var siteSchema = new mongoose.Schema({
+    _id: Number,
     url: {
         type: String,
         unique: true,
@@ -11,7 +12,7 @@ var siteSchema = new mongoose.Schema({
         unique: true,
         index: true
     },
-    languages: [String],
+    languages: [{ type: Number, ref: 'Language' }],
     paid: {type: Boolean, default: false },
     plans: [{plan_type: String, price: Number}],
     virtual: {type: Boolean, default: true },

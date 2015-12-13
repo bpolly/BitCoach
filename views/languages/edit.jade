@@ -1,0 +1,39 @@
+extends ../layout
+
+block extraHeader
+  link(rel='stylesheet', href='/css/site.css')
+block content
+  .container
+    form(name="edit_site" class="form-horizontal", method="post")
+          .form-group
+              label.col-sm-2.control-label Name
+              .col-sm-10
+                input.form-control(type="text", name="url", value="#{language.name}")
+          .form-group
+              label.col-sm-2.control-label URL
+              .col-sm-10
+                input.form-control(type="text", name="name", value="#{language.url}")
+          .form-group
+              label.col-sm-2.control-label Category
+              .col-sm-10
+                input.form-control(type="text", name="category", value="#{language.category}")
+          .form-group
+              label.col-sm-2.control-label Long Description
+              .col-sm-10
+                input.form-control(type="text", name="long_description", value="#{language.long_description}")
+          .form-group
+              label.col-sm-2.control-label Short Description
+              .col-sm-10
+                input.form-control(type="text", name="short_description", value="#{language.short_description}")
+          .form-group
+              label.col-sm-2.control-label Thumbnail File Path
+              .col-sm-10
+                  input.form-control(type="text", name="thumbnail_path", value="#{language.thumbnail_path}")
+          .form-group
+              label.col-sm-2.control-label Large Banner File Path
+              .col-sm-10
+                input.form-control(type="text", name="large_banner_path", value="#{language.large_banner_path}")
+              
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              button.btn.btn-default(type='submit', value="update") Submit

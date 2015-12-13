@@ -34,6 +34,9 @@ html
     link(href='/css/navbar.css', rel='stylesheet')  
     script(type="text/javascript" src="https://cdn.jsdelivr.net/select2/4.0.1-rc.1/js/select2.js" defer)
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/select2/4.0.1-rc.1/css/select2.css" defer)
+    script(src='https://use.typekit.net/blp3uli.js')
+    script.
+      try{Typekit.load({ async: true });}catch(e){}
     
     
     
@@ -44,7 +47,7 @@ html
   body
     // Navbar
     #topnav.navbar.navbar-default.navbar-fixed-top
-      .container
+      .container#navcontainer
         .navbar-header
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
             span.icon-bar
@@ -61,6 +64,8 @@ html
               a(href='/technologies') Technologies & Frameworks
             li(class=title=='Rankings'?'active':undefined)
               a(href='/rankings') Rankings
+            li(class=category=='Languages'?'active':undefined)
+              a(href='/languages') Languages
             li.dropdown(class=category=='Sites'?'active':undefined)
               a.dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
                 | Sites 
@@ -110,4 +115,5 @@ html
           .col-lg-12
             h1.page-header
               =title
-    block content
+    .container
+      block content
