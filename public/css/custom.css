@@ -1,6 +1,15 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400,700,900,300");
 @import url(https://fonts.googleapis.com/css?family=Pontano+Sans|News+Cycle:400,700);
 
+body {
+  background-color: #2C3043;
+}
+
+.container:not(#navcontainer) {
+  background-color: white;
+}
+
+
 p {
     /*font-family: 'Open Sans',serif;
     font-family: museo-sans;*/
