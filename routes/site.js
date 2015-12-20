@@ -117,8 +117,15 @@ router.post('/delete/:site_id', function(req, res, next){
 });
 
 
-router.get('/show', function(req, res, next){
-  res.render('sites/show');
+router.get('/:side_id', function(req, res, next){
+    var Site = require("../models/site").Site;
+    var query = { _id: req.params.side_id };
+    Site.findOne(query).populate('languages').exec(function(err, result) {
+          console.log(JSON.stringify(result));
+          res.render('sites/show', { site: result, languages: result.languages, action: "show" });
+          //res.render('languages/show', { title: 'Languages', category: category, language: result });
+        });
+
 });
 
 router.get('/language_list.json', function(req, res, next){

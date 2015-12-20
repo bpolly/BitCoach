@@ -7,6 +7,10 @@ html,body {
   height: 100%;
 }
 
+.site_show_content {
+  margin-top: 50px;
+}
+
 .right_content {
   background-color: rgb(252, 252, 252);
   height: 100%;
@@ -42,9 +46,24 @@ html,body {
   margin-top: 13px;
   font-family: lato !important;
   background-color: #7EBD42;
-  color: white;
+  color: rgb(0, 59, 93);
+  background-color: rgb(2, 15, 42);
   padding: 0px 10px;
   margin-bottom: 0;
   border-bottom: 1px solid rgb(0, 36, 54);
   vertical-align: middle;
+}
+.site_header {
+  background-color: rgb(39, 189, 216);
+  text-align: right;
+  padding: 0;
+  margin-top: 20px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.site_header h1{
+  color: white;
+  padding: 0;
+  margin: 0;
 }
