@@ -108,12 +108,12 @@ html
 
                   
     
-    // Page Header
-    if title != "Home" && action != "show"
-      .container
-        .row
-          .col-lg-12
-            h1.page-header
-              =title
-    .container
+    
+    .container#layout_container
+      if title != "Home" && action != "show"
+        .container
+          .row
+            .col-lg-12
+              h1.page-header
+                =title
       block content

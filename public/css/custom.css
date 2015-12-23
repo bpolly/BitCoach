@@ -7,8 +7,13 @@ body {
 
 .container:not(#navcontainer) {
   background-color: white;
-  border: 12px solid rgb(39, 189, 216);
-  min-height: 800px;
+  width: 95% !important;
+}
+
+#layout_container {
+    border: 12px solid rgb(39, 189, 216);
+
+      min-height: 800px;
 }
 
 
